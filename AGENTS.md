@@ -1,81 +1,131 @@
-# Agent Guidelines for al-folio
+# TMS Lab Website — Agent Guide
 
-A simple, clean, and responsive Jekyll theme for academics.
+Site for the Brain Imaging and TMS Laboratory, Dr. Ying-hui Chou, University of Arizona. Built on a customized [al-folio](https://github.com/alshedivat/al-folio) Jekyll theme.
 
-## Quick Links by Role
+Live URL: https://brain-imaging-and-tms-laboratory.github.io/tmslab/
 
-- **Are you a coding agent?** → Read [`.github/copilot-instructions.md`](.github/copilot-instructions.md) first (tech stack, build, CI/CD, common pitfalls & solutions)
-- **Customizing the site?** → See [`.github/agents/customize.agent.md`](.github/agents/customize.agent.md)
-- **Writing documentation?** → See [`.github/agents/docs.agent.md`](.github/agents/docs.agent.md)
-- **Need setup/deployment help?** → [INSTALL.md](INSTALL.md)
-- **Troubleshooting & FAQ?** → [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
-- **Customization & theming?** → [CUSTOMIZE.md](CUSTOMIZE.md)
-- **Quick 5-min start?** → [QUICKSTART.md](QUICKSTART.md)
+## Build & deploy
 
-## Essential Commands
+- Local dev: `docker compose up` → http://localhost:8080 (auto-rebuild on file changes).
+- Stop: `docker compose down`.
+- Rebuild after `Dockerfile`/`Gemfile` changes: `docker compose up --build`.
+- Deploy: GitHub Actions `.github/workflows/deploy.yml` runs on every push to `main` that touches source files, builds with `JEKYLL_ENV=production`, runs PurgeCSS, and pushes `_site/` to the `gh-pages` branch. Only two workflows matter: `deploy.yml` and `update-citations.yml`.
+- Node/npm aren't installed on the author's Mac — don't try to run PurgeCSS locally. The CI installs `purgecss` globally and runs `purgecss -c purgecss.config.js` against `_site/`.
 
-### Local Development (Docker)
+## Critical config (`_config.yml`)
 
-The recommended approach is using Docker.
+- `url: https://brain-imaging-and-tms-laboratory.github.io` + `baseurl: /tmslab` — these must be paired. Any change to the org or repo name needs BOTH updated here AND in the Formsubmit `_next` redirects (see below).
+- `search_enabled: false` — global ⌘K nav search is intentionally off.
+- `bib_search: true` — the filter input on the Publications page. Must stay true or the filter disappears.
+- `max_author_limit: 10` — authors shown before "et al." truncation in publication entries. Must be an explicit number; blank is treated as truthy and collapses every entry.
+- `imagemagick` widths: `[480, 800, 1400]` — responsive image variants generated at build time. Gallery auto-discovery filters these out so originals aren't quadruplicated.
 
-```bash
-# Initial setup & start dev server
-docker compose pull && docker compose up
-# Site runs at http://localhost:8080
+## Page inventory
 
-# Rebuild after changing dependencies or Dockerfile
-docker compose up --build
+Live pages in `_pages/` (linked from `_includes/header.liquid`): `about.md` (homepage), `research.md`, `publications.md`, `people.md`, `news.md`, `gallery.md`, `join.md`, `contact.md`. Plus `404.md`.
 
-# Stop containers and free port 8080
-docker compose down
+The nav does NOT include an "About" item — the site title in the navbar serves that role and links to the homepage.
+
+## Custom styling — `_sass/_tmslab.scss`
+
+This file holds all lab-specific CSS. It's `@use`d last in `assets/css/main.scss` so it overrides al-folio defaults without `!important` wherever specificity permits.
+
+Desert/terracotta palette tokens are defined at the top. Section conventions:
+
+- `.tmslab-hero` — homepage Tucson skyline hero (gradient overlay for contrast).
+- `.tmslab-objectives-grid`, `.tmslab-research-grid`, `.tmslab-cta-grid` — homepage content grids.
+- `.tmslab-themes-label` — small-caps section labels used on Research/Join pages.
+- `.tmslab-pi-section`, `.tmslab-members-grid` — People page.
+- `.tmslab-ticker*` — CSS-marquee news ticker (below navbar, homepage only).
+- `.tmslab-font-toggle*` — floating font-size pill, bottom-left.
+- `.tmslab-modal*` — participate-in-a-study modal (site-wide, triggered by `data-tmslab-open-modal="participate"`).
+- `.tmslab-form-card`, `.tmslab-map-card`, `.tmslab-contact-*` — Contact page.
+
+### Known Sass gotcha — CSS custom properties inside `calc()`
+
+Sass's math engine parses `--foo-bar` inside `calc()` as subtraction operators (`- -foo - bar`) and mangles the output under compression. The font-size toggle hit this:
+
+```scss
+// BAD — compresses to `calc(100% * var( -  - tmslab - font - scale, 1))`
+html { font-size: calc(100% * var(--tmslab-font-scale, 1)); }
+
+// GOOD — interpolation passes the expression through verbatim
+html { font-size: #{"calc(100% * var(--tmslab-font-scale, 1))"}; }
 ```
 
-### Pre-Commit Checklist
+Apply the same pattern anywhere you combine `calc()` with a `var(--custom-property)`.
 
-Before every commit, you **must** run these steps:
+## Font-size toggle
 
-1.  **Format Code:**
-    ```bash
-    # (First time only)
-    npm install --save-dev prettier @shopify/prettier-plugin-liquid
-    # Format all files
-    npx prettier . --write
-    ```
-2.  **Build Locally & Verify:**
+- Target audience includes older adults (50–85), so a persistent "regular / big" pair lives bottom-left as a floating pill.
+- Class lives on `<html>` (NOT `<body>`) — custom properties inherit down, not up.
+- Preference persists in `localStorage` under `tmslab-font-size` (`"regular"` | `"big"`).
+- A tiny inline preload script in `_layouts/default.liquid` applies `html.font-size-big` before body paint to avoid flash-of-unstyled-size on reload.
+- Runtime class is applied by `assets/js/font-toggle.js`.
 
-    ```bash
-    # Rebuild the site
-    docker compose up --build
+## PurgeCSS
 
-    # Verify by visiting http://localhost:8080.
-    # Check navigation, pages, images, and dark mode.
-    ```
+`purgecss.config.js` carries a safelist for classes applied only at runtime by JS, which the purger would otherwise strip because they never appear as static attributes in the built HTML:
 
-## Critical Configuration
+- `font-size-big` — font toggle runtime class
+- `modal-open` — set on `<body>` while overlays are open
+- `is-visible` — toast for participate-modal submit
+- `is-active` — legacy carry-over; safe kept
 
-When modifying `_config.yml`, these **must be updated together**:
+Greedy patterns `/^font-size-/` and `/^is-/` catch future additions. When adding new JS-driven classes, add them (or a matching pattern) to the safelist, otherwise they disappear in production.
 
-- **Personal site:** `url: https://username.github.io` + `baseurl:` (empty)
-- **Project site:** `url: https://username.github.io` + `baseurl: /repo-name/`
-- **YAML errors:** Quote strings with special characters: `title: "My: Cool Site"`
+## Contact forms
 
-## Development Workflow
+Both forms use [Formsubmit.co](https://formsubmit.co) with Dr. Chou's email as the action target — no API key required.
 
-- **Git & Commits:** For commit message format and Git practices, see [.github/GIT_WORKFLOW.md](.github/GIT_WORKFLOW.md).
-- **Code-Specific Instructions:** Consult the relevant instruction file for your code type.
+- Contact page: `_pages/contact.md`
+- Participate-in-a-study modal: `_includes/participate_modal.liquid`
 
-| File Type                                     | Instruction File                                                                                |
-| --------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| Markdown content (`_posts/`, `_pages/`, etc.) | [markdown-content.instructions.md](.github/instructions/markdown-content.instructions.md)       |
-| YAML config (`_config.yml`, `_data/`)         | [yaml-configuration.instructions.md](.github/instructions/yaml-configuration.instructions.md)   |
-| BibTeX (`_bibliography/`)                     | [bibtex-bibliography.instructions.md](.github/instructions/bibtex-bibliography.instructions.md) |
-| Liquid templates (`_includes/`, `_layouts/`)  | [liquid-templates.instructions.md](.github/instructions/liquid-templates.instructions.md)       |
-| JavaScript (`_scripts/`)                      | [javascript-scripts.instructions.md](.github/instructions/javascript-scripts.instructions.md)   |
+Both contain a hidden `<input name="_next" value="...">` pointing to the deployed URL. If the domain ever changes, update BOTH `_next` values AND `url:` in `_config.yml`.
 
-## Common Issues
+## News ticker
 
-For troubleshooting, see:
+- Content source: `_news/*.md` files (each a single news item with front-matter).
+- Rendered by `_includes/news_ticker.liquid` as a CSS-marquee (content duplicated twice for a seamless loop). No JS rotation.
+- Only renders on the homepage (guarded by `{% if page.layout == 'about' %}` in `_layouts/default.liquid`).
+- `prefers-reduced-motion: reduce` pauses the scroll.
 
-- [Common Pitfalls & Workarounds](.github/copilot-instructions.md#common-pitfalls--workarounds) in copilot-instructions.md
-- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for detailed solutions
-- [GitHub Issues](https://github.com/alshedivat/al-folio/issues) to search for your specific problem.
+## Gallery
+
+`_pages/gallery.md` auto-discovers images from `assets/img/gallery/`. Filename becomes a title-cased caption. The discovery loop filters out `-480`/`-800`/`-1400` imagemagick variants so each original shows exactly once. Lightbox: `assets/js/gallery-lightbox.js`.
+
+## Publications
+
+- Source: `_bibliography/papers.bib` (BibTeX).
+- Full author lists are shown up to `max_author_limit: 10`, then truncated with "et al."
+- Filter input is rendered inline next to the page heading on `_pages/publications.md` — controlled by `bib_search: true`.
+- Year markers on the left of each year group.
+
+## Favicons
+
+Generated by [realfavicongenerator.net](https://realfavicongenerator.net/). Files live in `assets/img/favicons/`. The `site.webmanifest` contains `/tmslab/` prefixes — if `baseurl` changes, regenerate or manually update the manifest paths.
+
+## Common pitfalls
+
+- **"My change works locally but not on deploy"** — 95% of the time it's either (a) Sass's calc/custom-property interaction (above), or (b) PurgeCSS stripping a runtime class (add to safelist).
+- **Kramdown wraps bare `<a>` in `<p>`** — if an inline HTML link looks wrong-sized, it may have inherited a `<p>` `max-width` constraint. Wrap in an explicit `<div>`.
+- **Stale `_site/`** — `bundle exec jekyll clean` before debugging "why is this old thing still showing up?"
+- **`max_author_limit` blank** — see config section. Always set an explicit integer.
+- **Caching** — updated assets (e.g., a replaced photo) often appear old due to browser cache. `bust_file_cache` / `bust_css_cache` Liquid filters handle this for CSS/JS but NOT for images referenced by front-matter paths. Ask the user to hard-reload when debugging image updates.
+- **Do not run PurgeCSS locally** — no npm installed. Deploy CI handles it.
+
+## Pre-commit
+
+Format before committing:
+
+```bash
+npx prettier . --write
+```
+
+(First-time setup: `npm install --save-dev prettier @shopify/prettier-plugin-liquid`.)
+
+## Git workflow
+
+- Main branch: `main`.
+- Deploy branch: `gh-pages` (auto-generated by Actions — don't edit by hand).
+- Remote: `https://github.com/Brain-Imaging-and-TMS-Laboratory/tmslab.git` (org-owned after Apr 2026 transfer from `hangbinzhang/tmslab`).
