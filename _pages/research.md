@@ -2,7 +2,6 @@
 layout: page
 permalink: /research/
 title: Research
-description: Research overview, funded projects, and trainee recognition at the Brain Imaging and TMS Laboratory.
 nav: true
 nav_order: 2
 ---
@@ -12,83 +11,83 @@ nav_order: 2
 <section class="tmslab-research-page-intro">
 
 <p class="tmslab-research-page-intro-text">
-Our research combines transcranial magnetic stimulation, neuroimaging, and cognitive assessment to study the aging brain. This page provides an overview of our active research themes, current funding, and past support &mdash; for the lab's mission and core objectives, see the <a href="{{ '/' | relative_url }}">homepage</a>.
+Our research integrates TMS, neuroimaging, and cognitive assessment to understand the aging brain. We study mild cognitive impairment, Alzheimer's disease, and cognitive aging &mdash; with a focus on image-guided therapeutic protocols and early biomarkers of decline.
 </p>
 
 </section>
 
-<p class="tmslab-cta-inline">
-  Interested in joining a study? <a href="#" data-tmslab-open-modal="participate" aria-haspopup="dialog">Complete the participation form &rarr;</a>
-</p>
-
 <section>
 
-<h2>Research Themes</h2>
+<p class="tmslab-themes-label">Research Themes</p>
 
 <div class="tmslab-themes-list">
 
-  <article class="tmslab-theme-row">
-    <div class="tmslab-theme-img">
-      <img src="{{ '/assets/img/research/01_tms_memory.jpg' | relative_url }}" alt="Image-guided TMS for memory enhancement" loading="lazy">
+  <article class="tmslab-theme-block">
+    <div class="tmslab-theme-figure">
+      <img src="{{ '/assets/img/research/01_tms_memory.jpg' | relative_url }}" alt="Memory and cognition enhancement" loading="lazy">
     </div>
     <div class="tmslab-theme-content">
-      <h3 class="tmslab-theme-title">Image-guided TMS for memory enhancement</h3>
-      <p class="tmslab-theme-desc">We are developing image-guided repetitive TMS protocols to improve memory function in older adults and those at risk for Alzheimer's disease. By personalizing stimulation targets using individual neuroimaging &mdash; resting-state connectivity, hippocampal anatomy, and white matter pathways &mdash; we aim to move beyond one-size-fits-all protocols and improve therapeutic outcomes. This program is supported by two active NIH/NIA R01 grants.</p>
-      <p class="tmslab-theme-pubs"><em>Example publications:</em> Chen et al. 2022 (<em>PNAS</em>); Sundman et al. 2020 (<em>Brain Communications</em>); Chou et al. 2020 (<em>Neurobiology of Aging</em>).</p>
+      <h3 class="tmslab-theme-title">Memory &amp; cognition enhancement</h3>
+      <p class="tmslab-theme-description">Using neuroimaging and individualized targeting, we are developing image-guided TMS protocols to enhance memory in older adults and those at risk for Alzheimer's disease. By personalizing stimulation targets with resting-state connectivity, hippocampal anatomy, and white-matter pathways, we aim to move beyond one-size-fits-all protocols and improve therapeutic outcomes.</p>
+      <p class="tmslab-theme-examples"><em>Examples:</em> Chen et al. 2022 (<em>PNAS</em>); Chou et al. 2020 (<em>Neurobiology of Aging</em>).</p>
     </div>
   </article>
 
-  <article class="tmslab-theme-row">
-    <div class="tmslab-theme-img">
-      <img src="{{ '/assets/img/research/02_biomarkers.jpg' | relative_url }}" alt="TMS-derived biomarkers of brain health" loading="lazy">
+  <article class="tmslab-theme-block">
+    <div class="tmslab-theme-figure">
+      <img src="{{ '/assets/img/research/02_biomarkers.jpg' | relative_url }}" alt="Plasticity and brain health" loading="lazy">
     </div>
     <div class="tmslab-theme-content">
-      <h3 class="tmslab-theme-title">TMS-derived biomarkers of brain health</h3>
-      <p class="tmslab-theme-desc">We investigate TMS-derived measures &mdash; including motor thresholds, short afferent inhibition (SAI), homeostatic metaplasticity, and TMS-EEG evoked potentials &mdash; as biomarkers of cortical excitability, plasticity, and brain network integrity. These measures hold promise for early detection of cognitive decline and prediction of therapeutic response.</p>
-      <p class="tmslab-theme-pubs"><em>Example publications:</em> Frank et al. 2026 (<em>Frontiers in Human Neuroscience</em>); Sundman et al. 2024 (<em>Aging Brain</em>); Hall et al. 2024 (<em>GeroScience</em>); Sundman et al. 2023 (<em>Neurobiology of Aging</em>); Chou et al. 2022 (<em>Ageing Research Reviews</em>).</p>
+      <h3 class="tmslab-theme-title">Plasticity &amp; brain health</h3>
+      <p class="tmslab-theme-description">Using TMS probes of cortical plasticity &mdash; including homeostatic metaplasticity, short afferent inhibition, and motor thresholds &mdash; we are characterizing brain health across aging. These measures hold promise as early biomarkers of cognitive decline and predictors of therapeutic response.</p>
+      <p class="tmslab-theme-examples"><em>Examples:</em> Sundman et al. 2024 (<em>Aging Brain</em>); Sundman et al. 2020 (<em>Brain Communications</em>).</p>
     </div>
   </article>
 
-  <article class="tmslab-theme-row">
-    <div class="tmslab-theme-img">
-      <img src="{{ '/assets/img/research/03_tms_fmri.jpg' | relative_url }}" alt="Concurrent TMS-fMRI and neuroimaging methods" loading="lazy">
+  <article class="tmslab-theme-block">
+    <div class="tmslab-theme-figure">
+      <img src="{{ '/assets/img/research/03_tms_fmri.jpg' | relative_url }}" alt="Precision neuromodulation" loading="lazy">
     </div>
     <div class="tmslab-theme-content">
-      <h3 class="tmslab-theme-title">Concurrent TMS-fMRI and neuroimaging methods</h3>
-      <p class="tmslab-theme-desc">We develop and apply methods for concurrent TMS-fMRI &mdash; recording brain activity in real time during TMS stimulation &mdash; to causally map brain network dynamics. This methodological work underlies the lab's ability to probe and modulate specific networks with precision. Current work focuses on MRI-compatible TMS systems and reproducible connectome-based targeting.</p>
-      <p class="tmslab-theme-pubs"><em>Example publications:</em> Liu et al. 2024 (<em>Frontiers in Human Neuroscience</em>); Chen et al. 2018 (<em>Brain Connectivity</em>); Chang et al. 2015 (<em>NeuroImage</em>); Chou et al. 2012 (<em>AJNR</em>).</p>
+      <h3 class="tmslab-theme-title">Precision neuromodulation</h3>
+      <p class="tmslab-theme-description">Combining neuronavigation, white-matter-tract targeting, electric-field modeling, and accelerated TMS protocols, we are advancing the field toward more precise and individualized stimulation. Ongoing work extends these approaches toward closed-loop stimulation guided by real-time brain signals.</p>
+      <p class="tmslab-theme-examples"><em>Examples:</em> Chen et al. 2022 (<em>PNAS</em>); Zhang et al. 2025 (<em>Biological Psychiatry</em>).</p>
     </div>
   </article>
 
-  <article class="tmslab-theme-row">
-    <div class="tmslab-theme-img">
-      <img src="{{ '/assets/img/research/04_cognition_aging.jpg' | relative_url }}" alt="Cognitive assessment in aging" loading="lazy">
+  <article class="tmslab-theme-block">
+    <div class="tmslab-theme-figure">
+      <img src="{{ '/assets/img/research/04_cognition_aging.jpg' | relative_url }}" alt="Methodological advances" loading="lazy">
     </div>
     <div class="tmslab-theme-content">
-      <h3 class="tmslab-theme-title">Cognitive assessment in aging</h3>
-      <p class="tmslab-theme-desc">We develop and validate sensitive cognitive assessments &mdash; from associative memory exams to computational models of explore-exploit decision-making &mdash; that can detect subtle changes across the cognitive aging spectrum. By linking behavioral measures to brain connectivity, we identify individuals at risk for decline earlier than traditional neuropsychological batteries allow.</p>
-      <p class="tmslab-theme-pubs"><em>Example publications:</em> Liu et al. 2025 (<em>Frontiers in Aging Neuroscience</em>); Phelps et al. 2025 (<em>PLOS Computational Biology</em>); Mizell et al. 2024 (<em>Psychology and Aging</em>); Grijalva et al. 2021 (<em>Journal of Neuroimaging</em>).</p>
+      <h3 class="tmslab-theme-title">Methodological advances</h3>
+      <p class="tmslab-theme-description">Using spatially-resolved EEG, connectomic analyses, and novel cognitive assessments, we are developing new tools to measure TMS-induced brain changes and detect subtle aging-related decline. This work supports both our therapeutic program and the broader field.</p>
+      <p class="tmslab-theme-examples"><em>Examples:</em> Frank et al. 2026 (<em>Frontiers in Human Neuroscience</em>); Liu et al. 2025 (<em>Frontiers in Aging Neuroscience</em>).</p>
     </div>
   </article>
 
-  <article class="tmslab-theme-row">
-    <div class="tmslab-theme-img">
-      <img src="{{ '/assets/img/research/05_clinical_populations.jpg' | relative_url }}" alt="TMS across clinical populations" loading="lazy">
+  <article class="tmslab-theme-block">
+    <div class="tmslab-theme-figure">
+      <img src="{{ '/assets/img/research/05_clinical_populations.jpg' | relative_url }}" alt="Cross-population applications" loading="lazy">
     </div>
     <div class="tmslab-theme-content">
-      <h3 class="tmslab-theme-title">TMS across clinical populations</h3>
-      <p class="tmslab-theme-desc">Beyond aging research, we collaborate across clinical populations to expand TMS therapeutics. Ongoing and past work includes Parkinson's disease, stroke aphasia, post-chemotherapy cognitive impairment, carotid disease, and depression &mdash; each presenting unique opportunities to advance neuromodulation as a translational tool.</p>
-      <p class="tmslab-theme-pubs"><em>Example publications:</em> Succar et al. 2025 (<em>Annals of Surgery</em>); Zhang et al. 2025 (<em>Biological Psychiatry</em>); Kuo et al. 2023 (<em>Sensors</em>); Kielar et al. 2022 (<em>Clinical Neurophysiology</em>); Chou et al. 2015 (<em>JAMA Neurology</em>).</p>
+      <h3 class="tmslab-theme-title">Cross-population applications</h3>
+      <p class="tmslab-theme-description">Extending TMS therapeutics beyond cognitive aging, we collaborate with clinical partners across diverse populations &mdash; including Parkinson's disease, stroke aphasia, post-chemotherapy cognitive impairment, and carotid disease &mdash; to advance neuromodulation as a translational tool.</p>
+      <p class="tmslab-theme-examples"><em>Examples:</em> Chou et al. 2015 (<em>JAMA Neurology</em>); Kielar et al. 2022 (<em>Clinical Neurophysiology</em>).</p>
     </div>
   </article>
 
 </div>
 
+<p class="tmslab-cta-inline">
+  Interested in joining a study? <a href="#" data-tmslab-open-modal="participate" aria-haspopup="dialog">Complete the participation form &rarr;</a>
+</p>
+
 </section>
 
 <section>
 
-<h2>Funding at a glance</h2>
+<p class="tmslab-themes-label">Funding at a glance</p>
 
 <div class="tmslab-stats-grid">
 
@@ -98,18 +97,13 @@ Our research combines transcranial magnetic stimulation, neuroimaging, and cogni
   </div>
 
   <div class="tmslab-stat">
-    <span class="tmslab-stat-num">7</span>
-    <span class="tmslab-stat-label">As PI (career)</span>
-  </div>
-
-  <div class="tmslab-stat">
-    <span class="tmslab-stat-num">16</span>
-    <span class="tmslab-stat-label">As Co&#8209;I / Key Personnel</span>
+    <span class="tmslab-stat-num">2</span>
+    <span class="tmslab-stat-label">As PI</span>
   </div>
 
   <div class="tmslab-stat tmslab-stat--text">
     <span class="tmslab-stat-num">NIH &middot; DoD &middot; VA</span>
-    <span class="tmslab-stat-label">Primary federal sponsors</span>
+    <span class="tmslab-stat-label">Funding agencies</span>
   </div>
 
 </div>
@@ -118,77 +112,69 @@ Our research combines transcranial magnetic stimulation, neuroimaging, and cogni
 
 <section>
 
-<h2>Current Research Support</h2>
+<p class="tmslab-themes-label">Current Research Support</p>
 
 <div class="tmslab-grants-grid">
 
-  <article class="tmslab-grant-card tmslab-grant-card--pi">
+  <article class="tmslab-grant-card">
     <div class="tmslab-grant-card-head">
-      <span class="tmslab-grant-pill tmslab-grant-pill--type-pi">R01</span>
-      <span class="tmslab-grant-pill tmslab-grant-pill--agency">NIH/NIA</span>
+      <span class="tmslab-grant-type-pill">R01</span>
+      <span class="tmslab-grant-agency-pill">NIH/NIA</span>
     </div>
     <h3 class="tmslab-grant-title">Hippocampal Plasticity via Repetitive TMS</h3>
-    <p class="tmslab-grant-fulltitle">Enhancement of Hippocampal Plasticity Using Repetitive Transcranial Magnetic Stimulation</p>
     <p class="tmslab-grant-meta">PI: Ying-hui Chou <span class="tmslab-dot">·</span> 05/2020 – 01/2025</p>
   </article>
 
   <article class="tmslab-grant-card">
     <div class="tmslab-grant-card-head">
-      <span class="tmslab-grant-pill tmslab-grant-pill--type-coi">Co&#8209;I</span>
-      <span class="tmslab-grant-pill tmslab-grant-pill--agency">DoD</span>
+      <span class="tmslab-grant-agency-pill">DoD</span>
     </div>
     <h3 class="tmslab-grant-title">TMS of the Default Mode Network for Sleep</h3>
-    <p class="tmslab-grant-fulltitle">Effectiveness of Transcranial Magnetic Stimulation of the Default Mode Network to Improve Sleep</p>
     <p class="tmslab-grant-meta">PI: William Scott Killgore <span class="tmslab-dot">·</span> Co-Investigator <span class="tmslab-dot">·</span> 09/2024 – 08/2027</p>
   </article>
 
   <article class="tmslab-grant-card">
     <div class="tmslab-grant-card-head">
-      <span class="tmslab-grant-pill tmslab-grant-pill--type-coi">Merit</span>
-      <span class="tmslab-grant-pill tmslab-grant-pill--agency">VA</span>
+      <span class="tmslab-grant-type-pill">Merit</span>
+      <span class="tmslab-grant-agency-pill">VA</span>
     </div>
     <h3 class="tmslab-grant-title">Carotid Disease in Cognitive Impairment &amp; Dementia</h3>
-    <p class="tmslab-grant-fulltitle">Role of Carotid Disease in Cognitive Impairment and Dementia (1I01CX002260-01A2)</p>
     <p class="tmslab-grant-meta">PI: Wei Zhou <span class="tmslab-dot">·</span> Co-Investigator <span class="tmslab-dot">·</span> 10/2024 – 09/2028</p>
   </article>
 
   <article class="tmslab-grant-card">
     <div class="tmslab-grant-card-head">
-      <span class="tmslab-grant-pill tmslab-grant-pill--type-coi">U01</span>
-      <span class="tmslab-grant-pill tmslab-grant-pill--agency">NIH/NIBIB</span>
+      <span class="tmslab-grant-type-pill">U01</span>
+      <span class="tmslab-grant-agency-pill">NIH/NIBIB</span>
     </div>
     <h3 class="tmslab-grant-title">Transcranial Acoustoelectric Imaging of Neuronal Currents</h3>
-    <p class="tmslab-grant-fulltitle">Transcranial Acoustoelectric Imaging for High-Resolution Functional Mapping of Neuronal Currents (U01 EB028662)</p>
     <p class="tmslab-grant-meta">PI: Russell Witte <span class="tmslab-dot">·</span> Co-Investigator <span class="tmslab-dot">·</span> 09/2020 – 06/2025</p>
   </article>
 
   <article class="tmslab-grant-card">
     <div class="tmslab-grant-card-head">
-      <span class="tmslab-grant-pill tmslab-grant-pill--type-coi">R56/R01</span>
-      <span class="tmslab-grant-pill tmslab-grant-pill--agency">NIH/NIA</span>
+      <span class="tmslab-grant-type-pill">R56/R01</span>
+      <span class="tmslab-grant-agency-pill">NIH/NIA</span>
     </div>
     <h3 class="tmslab-grant-title">Explore-Exploit Decision Making in Older Adults</h3>
-    <p class="tmslab-grant-fulltitle">Evaluating the Neurocomputational Mechanisms of Explore-Exploit Decision Making in Older Adults (AG061888)</p>
     <p class="tmslab-grant-meta">PI: Robert Wilson <span class="tmslab-dot">·</span> Co-Investigator <span class="tmslab-dot">·</span> 09/2018 – 01/2025</p>
   </article>
 
   <article class="tmslab-grant-card">
     <div class="tmslab-grant-card-head">
-      <span class="tmslab-grant-pill tmslab-grant-pill--type-coi">R21</span>
-      <span class="tmslab-grant-pill tmslab-grant-pill--agency">NIH/NINDS</span>
+      <span class="tmslab-grant-type-pill">R21</span>
+      <span class="tmslab-grant-agency-pill">NIH/NINDS</span>
     </div>
     <h3 class="tmslab-grant-title">EM Neuromodulation of Slow-Wave Activity &amp; the Glymphatic System</h3>
-    <p class="tmslab-grant-fulltitle">Investigating Electromagnetic Field-Based Neuromodulation of Slow-Wave Brain Activity and Glymphatic System (NS137573)</p>
     <p class="tmslab-grant-meta">PI: Nan-kuei Chen <span class="tmslab-dot">·</span> Co-Investigator <span class="tmslab-dot">·</span> 07/2024 – 06/2026</p>
   </article>
 
-  <article class="tmslab-grant-card tmslab-grant-card--pi">
+  <article class="tmslab-grant-card">
     <div class="tmslab-grant-card-head">
-      <span class="tmslab-grant-pill tmslab-grant-pill--type-pi">Developmental</span>
-      <span class="tmslab-grant-pill tmslab-grant-pill--agency">AZ Alzheimer's Consortium</span>
+      <span class="tmslab-grant-type-pill">Developmental</span>
+      <span class="tmslab-grant-agency-pill">AZ Alzheimer's Consortium</span>
     </div>
     <h3 class="tmslab-grant-title">Arizona Alzheimer's Consortium Project</h3>
-    <p class="tmslab-grant-fulltitle">Arizona Alzheimer's Consortium Non-Matched Project</p>
     <p class="tmslab-grant-meta">PI: Ying-hui Chou <span class="tmslab-dot">·</span> 07/2023 – 06/2025</p>
   </article>
 
@@ -198,7 +184,7 @@ Our research combines transcranial magnetic stimulation, neuroimaging, and cogni
 
 <section>
 
-<h2>Past Research Support</h2>
+<p class="tmslab-themes-label">Past Research Support</p>
 
 <p class="tmslab-grants-table-caption">16 completed grants &mdash; scroll within the panel below to see all.</p>
 

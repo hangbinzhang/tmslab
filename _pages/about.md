@@ -4,6 +4,18 @@ title: About
 permalink: /
 subtitle: Brain Imaging and TMS Laboratory &mdash; University of Arizona
 
+# TODO: Replace the generated placeholder figures in /assets/img/research/
+# with real evocative imagery (Unsplash photos, lab photos, or similar)
+# per theme. Filenames to keep:
+#   01_tms_memory.jpg        → theme 1 (memory & cognition enhancement)
+#   02_biomarkers.jpg        → theme 2 (plasticity & brain health)
+#   03_tms_fmri.jpg          → theme 3 (precision neuromodulation)
+#   04_cognition_aging.jpg   → theme 4 (methodological advances)
+#   05_clinical_populations.jpg → theme 5 (cross-population applications)
+# Aspect ratio: roughly 16:10 landscape, ~1200x750 or larger.
+# Current placeholders are intentionally simple — real photos will
+# make the tiles feel significantly more polished.
+
 # PI photo / address intentionally not shown on homepage —
 # Dr. Chou's bio + photo lives on /people/. The hero below
 # is the visual landing.
@@ -27,9 +39,11 @@ latest_posts:
 <div class="tmslab-hero">
   <img src="{{ '/assets/img/hero/tucson_skyline.jpg' | relative_url }}" alt="Downtown Tucson skyline at sunset with Sentinel Peak (the A Mountain) at right" class="tmslab-hero-img">
   <div class="tmslab-hero-overlay">
-    <p class="tmslab-hero-kicker">University of Arizona</p>
-    <h1>Brain Imaging and TMS Laboratory</h1>
-    <p class="tmslab-hero-tagline">Advancing the understanding of memory enhancement, brain-behavior relationships,<br>and biomarkers in neurodegenerative disorders</p>
+    <div class="tmslab-hero-overlay-inner">
+      <p class="tmslab-hero-kicker">University of Arizona</p>
+      <h1>Brain Imaging and TMS Laboratory</h1>
+      <p class="tmslab-hero-tagline">Advancing the understanding of memory enhancement, brain-behavior relationships,<br>and biomarkers in neurodegenerative disorders</p>
+    </div>
   </div>
 </div>
 
@@ -73,33 +87,33 @@ latest_posts:
 
   <a href="{{ '/research/' | relative_url }}" class="tmslab-research-card">
     <div class="tmslab-research-card-img">
-      <img src="{{ '/assets/img/research/01_tms_memory.jpg' | relative_url }}" alt="Image-guided TMS for memory enhancement" loading="lazy">
+      <img src="{{ '/assets/img/research/01_tms_memory.jpg' | relative_url }}" alt="Memory and cognition enhancement" loading="lazy">
     </div>
     <div class="tmslab-research-card-body">
-      <h4 class="tmslab-research-card-title">Image-guided TMS for memory enhancement</h4>
-      <p class="tmslab-research-card-desc">Developing personalized, neuroimaging-guided TMS protocols to improve memory in older adults and MCI.</p>
+      <h4 class="tmslab-research-card-title">Memory &amp; cognition enhancement</h4>
+      <p class="tmslab-research-card-desc">Using neuroimaging and individualized targeting, we are developing image-guided TMS protocols to enhance memory in older adults and those at risk for Alzheimer's disease.</p>
       <span class="tmslab-research-card-arrow" aria-hidden="true">→</span>
     </div>
   </a>
 
   <a href="{{ '/research/' | relative_url }}" class="tmslab-research-card">
     <div class="tmslab-research-card-img">
-      <img src="{{ '/assets/img/research/02_biomarkers.jpg' | relative_url }}" alt="TMS-derived biomarkers of brain health" loading="lazy">
+      <img src="{{ '/assets/img/research/02_biomarkers.jpg' | relative_url }}" alt="Plasticity and brain health" loading="lazy">
     </div>
     <div class="tmslab-research-card-body">
-      <h4 class="tmslab-research-card-title">TMS-derived biomarkers of brain health</h4>
-      <p class="tmslab-research-card-desc">Using TMS-EEG and motor-evoked measures to characterize cortical excitability and plasticity in aging.</p>
+      <h4 class="tmslab-research-card-title">Plasticity &amp; brain health</h4>
+      <p class="tmslab-research-card-desc">Using TMS probes of cortical excitability and plasticity, we are identifying early biomarkers of cognitive decline and brain health across aging.</p>
       <span class="tmslab-research-card-arrow" aria-hidden="true">→</span>
     </div>
   </a>
 
   <a href="{{ '/research/' | relative_url }}" class="tmslab-research-card">
     <div class="tmslab-research-card-img">
-      <img src="{{ '/assets/img/research/03_tms_fmri.jpg' | relative_url }}" alt="Concurrent TMS-fMRI and neuroimaging methods" loading="lazy">
+      <img src="{{ '/assets/img/research/03_tms_fmri.jpg' | relative_url }}" alt="Precision neuromodulation" loading="lazy">
     </div>
     <div class="tmslab-research-card-body">
-      <h4 class="tmslab-research-card-title">Concurrent TMS-fMRI and neuroimaging methods</h4>
-      <p class="tmslab-research-card-desc">Developing methods for real-time imaging of TMS-induced brain activity and causal network mapping.</p>
+      <h4 class="tmslab-research-card-title">Precision neuromodulation</h4>
+      <p class="tmslab-research-card-desc">Combining neuronavigation, white-matter-tract guidance, electric-field modeling, and accelerated protocols, we are advancing TMS toward precision and eventually closed-loop stimulation.</p>
       <span class="tmslab-research-card-arrow" aria-hidden="true">→</span>
     </div>
   </a>
@@ -122,16 +136,19 @@ latest_posts:
     <span class="tmslab-cta-arrow">Learn more &rarr;</span>
   </a>
 
-  <a href="{{ '/join/' | relative_url }}" class="tmslab-cta-card">
+  <a href="{{ '/contact/' | relative_url }}" class="tmslab-cta-card">
     <h4>Join the lab</h4>
     <p>Graduate students, postdocs, and undergraduates: we are looking for motivated researchers.</p>
     <span class="tmslab-cta-arrow">Get in touch &rarr;</span>
   </a>
 
-  <a href="{{ '/contact/' | relative_url }}" class="tmslab-cta-card">
-    <h4>Contact us</h4>
-    <p>Psychology Building &amp; TMS Laboratory, University of Arizona, Tucson.</p>
-    <span class="tmslab-cta-arrow">See details &rarr;</span>
+  <!-- TODO: Replace href="#" with the real donation/giving page URL
+       (e.g., a University of Arizona Foundation gift link for the lab)
+       once it's set up. -->
+  <a href="#" class="tmslab-cta-card">
+    <h4>Donate today</h4>
+    <p>Support our research into memory, aging, and image-guided TMS therapies. Every gift helps.</p>
+    <span class="tmslab-cta-arrow">Give now &rarr;</span>
   </a>
 
 </div>

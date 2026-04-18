@@ -9,12 +9,10 @@ nav_order: 4
 
 <div class="tmslab-people-page">
 
-<h2 class="section-heading">Principal Investigator</h2>
-
-<section class="tmslab-pi">
+<section class="tmslab-pi-section">
 
   <div class="tmslab-pi-photo">
-    <img src="{{ '/assets/img/people/chou.jpg' | relative_url }}" alt="Ying-hui Chou">
+    <img src="{{ '/assets/img/people/chou.jpg' | relative_url }}" alt="Ying-hui Chou, Sc.D.">
     <div class="tmslab-pi-social">
       <a href="https://scholar.google.com/citations?user=eIZKmoIAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar profile (opens in a new tab)" title="Google Scholar">
         <i class="ai ai-google-scholar"></i>
@@ -26,244 +24,258 @@ nav_order: 4
   </div>
 
   <div class="tmslab-pi-content">
-    <h1 class="tmslab-pi-name">Ying-hui Chou, Sc.D.</h1>
-    <p class="tmslab-pi-role">Principal Investigator</p>
-    <hr class="tmslab-pi-divider">
-
-    <h3>Affiliations</h3>
-    <ul class="tmslab-pi-affiliations">
-      <li>Director, Brain Imaging and TMS Laboratory</li>
-      <!-- TODO: Confirm Dr. Chou's current academic rank (Associate Professor was the assumed default — update to Professor or Assistant Professor if different). -->
-      <li>Associate Professor, Department of Psychology</li>
-      <li>Faculty, BIO5 Institute &middot; Evelyn F. McKnight Brain Institute &middot; Arizona Center on Aging</li>
-    </ul>
-
-    <h3>Research Focus</h3>
+    <h2 class="tmslab-pi-name">Ying-hui Chou, Sc.D.</h2>
+    <p class="tmslab-pi-role">Principal Investigator &middot; Director, Brain Imaging and TMS Laboratory</p>
     <p class="tmslab-pi-bio">Dr. Chou directs the Brain Imaging and TMS Laboratory at the University of Arizona. Her research integrates brain imaging and transcranial magnetic stimulation to develop image-guided therapeutic protocols and identify biomarkers for mild cognitive impairment, Alzheimer's disease, and cognitive aging.</p>
+    <!-- TODO: Confirm Dr. Chou's current academic rank (Associate Professor was assumed — update if different). -->
+    <p class="tmslab-pi-affiliations">Associate Professor, Department of Psychology. Faculty member at BIO5 Institute, Evelyn F. McKnight Brain Institute, and Arizona Center on Aging.</p>
   </div>
 
 </section>
 
 <h2 class="section-heading">Current Members</h2>
 
-<h3 class="tmslab-people-subheading">Postdoctoral Associates</h3>
+<div class="tmslab-members-grid">
 
-<div class="people-grid">
+  <div class="tmslab-member-card">
+    <img src="{{ '/assets/img/people/sundman.jpg' | relative_url }}" alt="Mark Sundman" class="tmslab-member-photo">
+    <h3 class="tmslab-member-name">Mark Sundman, M.S., Ph.D.</h3>
+    <span class="tmslab-member-role">Postdoctoral Associate</span>
+    <p class="tmslab-member-bio">Ph.D. in Psychology (Cognition and Neural Systems), University of Arizona. M.S. in Integrative Medicine, George Washington University.</p>
+    <div class="tmslab-member-links">
+      <!-- TODO: Update href with real CV URL when available -->
+      <a class="tmslab-member-link" href="#" target="_blank" rel="noopener">CV</a>
+    </div>
+  </div>
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/sundman.jpg' | relative_url }}" alt="Mark Sundman">
-  <p class="name">Mark Sundman, M.S., Ph.D.</p>
-  <p class="role">Postdoctoral Associate</p>
-  <p class="bio">Mark earned his Ph.D. in Psychology (Cognition and Neural Systems) from the University of Arizona, and a Master of Science in Integrative Medicine from George Washington University. He earned his B.S. in Exercise Science from Elon University.</p>
-  <!-- TODO: Update href with real CV URL when available -->
-  <a class="tmslab-cv-btn" href="#" target="_blank" rel="noopener">CV</a>
-</div>
+  <div class="tmslab-member-card">
+    <img src="{{ '/assets/img/people/liu_yilin.jpg' | relative_url }}" alt="Yilin Liu" class="tmslab-member-photo">
+    <h3 class="tmslab-member-name">Yilin Liu, M.S., Ph.D.</h3>
+    <span class="tmslab-member-role">Postdoctoral Associate</span>
+    <p class="tmslab-member-bio">Ph.D. in CNS Psychology, University of Arizona.</p>
+    <div class="tmslab-member-links">
+      <!-- TODO: Update href with real CV URL when available -->
+      <a class="tmslab-member-link" href="#" target="_blank" rel="noopener">CV</a>
+    </div>
+  </div>
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/liu_yilin.jpg' | relative_url }}" alt="Yilin Liu">
-  <p class="name">Yilin Liu, M.S., Ph.D.</p>
-  <p class="role">Postdoctoral Associate</p>
-  <p class="bio">Yilin graduated from the University of Arizona with her Ph.D. in CNS Psychology.</p>
-</div>
+  <div class="tmslab-member-card">
+    <img src="{{ '/assets/img/people/green.jpg' | relative_url }}" alt="Jacob Green" class="tmslab-member-photo">
+    <h3 class="tmslab-member-name">Jacob (Jake) Green, M.S.</h3>
+    <span class="tmslab-member-role">Clinical Research Coordinator</span>
+    <p class="tmslab-member-bio">B.S. in Psychology, University of Arizona. M.S. in Psychology, Arizona State University.</p>
+    <div class="tmslab-member-links"></div>
+  </div>
 
-</div>
+  <div class="tmslab-member-card">
+    <img src="{{ '/assets/img/people/ugonna.jpg' | relative_url }}" alt="Chidi Ugonna" class="tmslab-member-photo">
+    <h3 class="tmslab-member-name">Chidi Ugonna, M.S.</h3>
+    <span class="tmslab-member-role">Research Specialist</span>
+    <p class="tmslab-member-bio">M.S. in Biomedical Engineering, Rutgers University. Develops MRI-based tools to identify, understand, and treat neurodegenerative disorders.</p>
+    <div class="tmslab-member-links"></div>
+  </div>
 
-<h3 class="tmslab-people-subheading">Lab Technicians &amp; Coordinators</h3>
+  <div class="tmslab-member-card">
+    <img src="{{ '/assets/img/people/hall_jd.jpg' | relative_url }}" alt="JD Hall" class="tmslab-member-photo">
+    <h3 class="tmslab-member-name">John David (JD) Hall, M.S.</h3>
+    <span class="tmslab-member-role">Ph.D. Candidate</span>
+    <p class="tmslab-member-bio">M.A. in Psychology, University of Indianapolis. B.A. in Psychology, Indiana University &ndash; Purdue University Indianapolis.</p>
+    <div class="tmslab-member-links"></div>
+  </div>
 
-<div class="people-grid">
+  <div class="tmslab-member-card">
+    <img src="{{ '/assets/img/people/zhang_hangbin.jpg' | relative_url }}" alt="Hangbin Zhang" class="tmslab-member-photo">
+    <h3 class="tmslab-member-name">Hangbin Zhang, M.S.</h3>
+    <span class="tmslab-member-role">Graduate Student</span>
+    <p class="tmslab-member-bio">M.S. in Experimental Psychology with Data Science, University of Manchester, UK.</p>
+    <div class="tmslab-member-links"></div>
+  </div>
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/green.jpg' | relative_url }}" alt="Jacob Green">
-  <p class="name">Jacob (Jake) Green, M.S.</p>
-  <p class="role">Clinical Research Coordinator</p>
-  <p class="bio">Jake graduated with his Bachelor and Master of Science in Psychology at the University of Arizona and Arizona State University, respectively.</p>
-</div>
+  <div class="tmslab-member-card">
+    <img src="{{ '/assets/img/people/norman.jpg' | relative_url }}" alt="Sarah Norman" class="tmslab-member-photo">
+    <h3 class="tmslab-member-name">Sarah Norman, B.S.</h3>
+    <span class="tmslab-member-role">Graduate Student</span>
+    <p class="tmslab-member-bio">B.S. in Psychology, Washington State University.</p>
+    <div class="tmslab-member-links"></div>
+  </div>
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/ugonna.jpg' | relative_url }}" alt="Chidi Ugonna">
-  <p class="name">Chidi Ugonna, M.S.</p>
-  <p class="role">Research Specialist</p>
-  <p class="bio">Chidi is interested in developing tools and techniques that use MRI to help identify, understand, and treat neurodegenerative disorders. He obtained a Master's in Biomedical Engineering from Rutgers University.</p>
-</div>
+  <div class="tmslab-member-card">
+    <img src="{{ '/assets/img/people/hickey.jpg' | relative_url }}" alt="Reyna Hickey" class="tmslab-member-photo">
+    <h3 class="tmslab-member-name">Reyna Hickey, B.S.</h3>
+    <span class="tmslab-member-role">Graduate Student</span>
+    <p class="tmslab-member-bio">B.S. in Neuroscience, University of Illinois. Pursuing a Ph.D. in Clinical Psychology.</p>
+    <div class="tmslab-member-links"></div>
+  </div>
 
-</div>
+  <div class="tmslab-member-card">
+    <img src="{{ '/assets/img/people/lai.jpg' | relative_url }}" alt="Kaitlyn Lai" class="tmslab-member-photo">
+    <h3 class="tmslab-member-name">Kaitlyn Lai</h3>
+    <span class="tmslab-member-role">Undergraduate Researcher</span>
+    <p class="tmslab-member-bio">B.S. in Neuroscience and Cognitive Science, minor in Health and Human Values. Interests: TMS effects on connectivity and cognition in MCI and Alzheimer's disease.</p>
+    <div class="tmslab-member-links"></div>
+  </div>
 
-<h3 class="tmslab-people-subheading">Graduate Students</h3>
+  <div class="tmslab-member-card">
+    <img src="{{ '/assets/img/people/arnold.jpg' | relative_url }}" alt="Gavin Arnold" class="tmslab-member-photo">
+    <h3 class="tmslab-member-name">Gavin Arnold</h3>
+    <span class="tmslab-member-role">Undergraduate Researcher</span>
+    <p class="tmslab-member-bio">B.S. in Biochemistry, minors in Neuroscience and Public Health. Interests: treatment options for neurodegenerative diseases.</p>
+    <div class="tmslab-member-links"></div>
+  </div>
 
-<div class="people-grid">
+  <div class="tmslab-member-card">
+    <img src="{{ '/assets/img/people/chen_carol.jpg' | relative_url }}" alt="Carol Chen" class="tmslab-member-photo">
+    <h3 class="tmslab-member-name">Carol Chen</h3>
+    <span class="tmslab-member-role">Undergraduate Researcher</span>
+    <p class="tmslab-member-bio">B.S. in Neuroscience and Cognitive Science, University of Arizona.</p>
+    <div class="tmslab-member-links"></div>
+  </div>
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/hall_jd.jpg' | relative_url }}" alt="JD Hall">
-  <p class="name">John David (JD) Hall, M.S.</p>
-  <p class="role">Ph.D. Candidate</p>
-  <p class="bio">JD earned his M.A. in Psychology from the University of Indianapolis and his Bachelor's degree in Psychology at Indiana University &ndash; Purdue University Indianapolis.</p>
-</div>
-
-<div class="person-card">
-  <img src="{{ '/assets/img/people/zhang_hangbin.jpg' | relative_url }}" alt="Hangbin Zhang">
-  <p class="name">Hangbin Zhang, M.S.</p>
-  <p class="role">Graduate Student</p>
-  <p class="bio">Hangbin received his Master's degree in Experimental Psychology with Data Science at the University of Manchester, UK.</p>
-</div>
-
-<div class="person-card">
-  <img src="{{ '/assets/img/people/norman.jpg' | relative_url }}" alt="Sarah Norman">
-  <p class="name">Sarah Norman, B.S.</p>
-  <p class="role">Graduate Student</p>
-  <p class="bio">Sarah graduated with her Bachelor of Science in Psychology from Washington State University.</p>
-</div>
-
-<div class="person-card">
-  <img src="{{ '/assets/img/people/hickey.jpg' | relative_url }}" alt="Reyna Hickey">
-  <p class="name">Reyna Hickey, B.S.</p>
-  <p class="role">Graduate Student</p>
-  <p class="bio">Reyna graduated with her B.S. in Neuroscience from the University of Illinois and is working toward her Clinical Psychology Ph.D.</p>
-</div>
-
-</div>
-
-<h3 class="tmslab-people-subheading">Undergraduate Students</h3>
-
-<div class="people-grid">
-
-<div class="person-card">
-  <img src="{{ '/assets/img/people/lai.jpg' | relative_url }}" alt="Kaitlyn Lai">
-  <p class="name">Kaitlyn Lai</p>
-  <p class="role">Undergraduate Student</p>
-  <p class="bio">Kaitlyn is working toward her Bachelor of Science in Neuroscience and Cognitive Science with a minor in Health and Human Values. Her research interests include how TMS can affect functional connectivity and cognition in mild cognitive impairment and Alzheimer's disease.</p>
-</div>
-
-<div class="person-card">
-  <img src="{{ '/assets/img/people/arnold.jpg' | relative_url }}" alt="Gavin Arnold">
-  <p class="name">Gavin Arnold</p>
-  <p class="role">Undergraduate Student</p>
-  <p class="bio">Gavin is working toward his Bachelor of Science in Biochemistry with minors in Neuroscience and Public Health. His research interests include exploring and improving treatment options for neurodegenerative diseases.</p>
-</div>
-
-<div class="person-card">
-  <img src="{{ '/assets/img/people/chen_carol.jpg' | relative_url }}" alt="Carol Chen">
-  <p class="name">Carol Chen</p>
-  <p class="role">Undergraduate Student</p>
-  <p class="bio">Carol is working toward a Bachelor of Science in Neuroscience and Cognitive Science at the University of Arizona.</p>
-</div>
-
-<div class="person-card">
-  <img src="{{ '/assets/img/people/dwivedi.jpg' | relative_url }}" alt="Shraddha Dwivedi">
-  <p class="name">Shraddha Dwivedi</p>
-  <p class="role">Undergraduate Student</p>
-  <p class="bio">Shraddha is working toward Bachelor of Science degrees in Neuroscience &amp; Cognitive Science and Molecular &amp; Cellular Biology with minors in Biochemistry and Public Health.</p>
-</div>
+  <div class="tmslab-member-card">
+    <img src="{{ '/assets/img/people/dwivedi.jpg' | relative_url }}" alt="Shraddha Dwivedi" class="tmslab-member-photo">
+    <h3 class="tmslab-member-name">Shraddha Dwivedi</h3>
+    <span class="tmslab-member-role">Undergraduate Researcher</span>
+    <p class="tmslab-member-bio">B.S. in Neuroscience &amp; Cognitive Science and Molecular &amp; Cellular Biology, minors in Biochemistry and Public Health.</p>
+    <div class="tmslab-member-links"></div>
+  </div>
 
 </div>
 
 <h2 class="section-heading">Alumni</h2>
 
-<div class="people-grid">
+<!--
+  TODO: Hangbin / Dr. Chou to verify these entries:
+  - Year ranges — many are currently placeholders "Years unknown"
+  - "Now at" entries — fill in current institution/position where possible
+  - Order — currently listed by departure (newest first, roughly).
+    Adjust if a different ordering makes more sense.
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/chen_yuchin.jpg' | relative_url }}" alt="Yu-Chin Allison Chen">
-  <p class="name">Yu-Chin (Allison) Chen, M.S., M.D., Ph.D.</p>
-  <p class="role">Alumna &mdash; Postdoctoral Associate</p>
-  <p class="bio">Dr. Chen acquired her Doctor of Medicine degrees from Chang Gung University in Taiwan. Her two medical degrees are in both Medicine and Traditional Chinese Medicine, including Acupuncture and Chiropractic.</p>
-</div>
+  Photos intentionally not rendered for alumni (portraits are a
+  current-member treatment). The .jpg files remain on disk under
+  /assets/img/people/ because a handful are still referenced in the
+  "Awards & Honors" section below.
+-->
+<div class="tmslab-alumni-list">
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/trapani.jpg' | relative_url }}" alt="Christopher Trapani">
-  <p class="name">Christopher Trapani, B.S.</p>
-  <p class="role">Alumnus &mdash; Medical School Student</p>
-  <p class="bio">Chris graduated with his Bachelor of Science in Neuroscience and Cognitive Science from the University of Arizona. He is currently a medical school student at the University of Arizona.</p>
-</div>
+  <div class="tmslab-alumnus-row">
+    <div class="tmslab-alumnus-header">
+      <span class="tmslab-alumnus-name">Yu-Chin (Allison) Chen, MS, MD, PhD</span>
+      <span class="tmslab-alumnus-meta">Postdoctoral Associate &middot; 2021&ndash;2024</span>
+    </div>
+    <div class="tmslab-alumnus-now">Physician, Taiwan</div>
+  </div>
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/haaheim.jpg' | relative_url }}" alt="Lisbeth Haaheim">
-  <p class="name">Lisbeth Haaheim, B.S.</p>
-  <p class="role">Alumna &mdash; Clinical Research Coordinator</p>
-  <p class="bio">Lisbeth graduated with her Bachelor of Science in Neuroscience and Cognitive Science from the University of Arizona.</p>
-</div>
+  <div class="tmslab-alumnus-row">
+    <div class="tmslab-alumnus-header">
+      <span class="tmslab-alumnus-name">Christopher Trapani, BS</span>
+      <span class="tmslab-alumnus-meta">Medical Student Researcher &middot; 2023&ndash;2024</span>
+    </div>
+    <div class="tmslab-alumnus-now">Medical student, University of Arizona</div>
+  </div>
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/siu.jpg' | relative_url }}" alt="Hannah Siu">
-  <p class="name">Hannah Siu, B.S.</p>
-  <p class="role">Alumna &mdash; Research Data Support Specialist</p>
-  <p class="bio">Hannah graduated with her Bachelor of Science in Neuroscience and Cognitive Science from the University of Arizona. She is currently working toward her Master's degree in Medical Nutrition at ASU.</p>
-</div>
+  <div class="tmslab-alumnus-row">
+    <div class="tmslab-alumnus-header">
+      <span class="tmslab-alumnus-name">Lisbeth Haaheim, BS</span>
+      <span class="tmslab-alumnus-meta">Clinical Research Coordinator &middot; Years unknown</span>
+    </div>
+    <div class="tmslab-alumnus-now">Clinical research</div>
+  </div>
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/jezerc.jpg' | relative_url }}" alt="Catherine Jezerc">
-  <p class="name">Catherine Jezerc</p>
-  <p class="role">Alumna &mdash; Undergraduate Student</p>
-  <p class="bio">Catherine completed her B.S. in Neuroscience and Cognitive Science with a minor in Studio Art at the University of Arizona.</p>
-</div>
+  <div class="tmslab-alumnus-row">
+    <div class="tmslab-alumnus-header">
+      <span class="tmslab-alumnus-name">Hannah Siu, BS</span>
+      <span class="tmslab-alumnus-meta">Research Data Support Specialist &middot; Years unknown</span>
+    </div>
+    <div class="tmslab-alumnus-now">MS candidate, Medical Nutrition, Arizona State University</div>
+  </div>
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/lim.jpg' | relative_url }}" alt="Koeun Lim">
-  <p class="name">Koeun Lim, Ph.D.</p>
-  <p class="role">Data Scientist</p>
-  <p class="bio">Dr. Lim earned her Ph.D. from the Harvard-MIT Division of Health Sciences and Technology. Her thesis focused on the dynamics of human decision making. Her research interests include understanding noise and dynamics of human physiology and behavior.</p>
-</div>
+  <div class="tmslab-alumnus-row">
+    <div class="tmslab-alumnus-header">
+      <span class="tmslab-alumnus-name">Catherine Jezerc, BS</span>
+      <span class="tmslab-alumnus-meta">Undergraduate Researcher &middot; Years unknown</span>
+    </div>
+    <div class="tmslab-alumnus-now">Recent graduate</div>
+  </div>
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/tonthat.jpg' | relative_url }}" alt="Viet Ton That">
-  <p class="name">Viet Ton That, B.S.</p>
-  <p class="role">Alumnus</p>
-  <p class="bio">Viet graduated with his B.S. in Psychological Sciences from the University of Arizona.</p>
-</div>
+  <div class="tmslab-alumnus-row">
+    <div class="tmslab-alumnus-header">
+      <span class="tmslab-alumnus-name">Koeun Lim, PhD</span>
+      <span class="tmslab-alumnus-meta">Data Scientist &middot; 2019&ndash;2021</span>
+    </div>
+    <div class="tmslab-alumnus-now">Industry data scientist</div>
+  </div>
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/devault.jpg' | relative_url }}" alt="Bernadette De Vault">
-  <p class="name">Bernadette De Vault, M.S.</p>
-  <p class="role">Alumna</p>
-  <p class="bio">Bernadette graduated with a B.A. in Psychology and a minor in Human Development from UC Davis. She obtained her M.S. in Clinical and Translational Sciences from the University of Arizona. Her research interests include early diagnosis and targeted treatment of neurodegenerative disease.</p>
-</div>
+  <div class="tmslab-alumnus-row">
+    <div class="tmslab-alumnus-header">
+      <span class="tmslab-alumnus-name">Viet Ton That, BS</span>
+      <span class="tmslab-alumnus-meta">Research Assistant &middot; Years unknown</span>
+    </div>
+    <div class="tmslab-alumnus-now">Post-graduate (details unknown)</div>
+  </div>
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/rodriguez.jpg' | relative_url }}" alt="Rudolph Rodriguez">
-  <p class="name">Rudolph John Rodriguez, B.S.</p>
-  <p class="role">Alumnus</p>
-  <p class="bio">Rudolph is currently working on his Ph.D. in Physics.</p>
-</div>
+  <div class="tmslab-alumnus-row">
+    <div class="tmslab-alumnus-header">
+      <span class="tmslab-alumnus-name">Bernadette De Vault, MS</span>
+      <span class="tmslab-alumnus-meta">Research Coordinator &middot; Years unknown</span>
+    </div>
+    <div class="tmslab-alumnus-now">Clinical research / public health</div>
+  </div>
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/orlik.jpg' | relative_url }}" alt="Madelynn Orlik">
-  <p class="name">Madelynn Orlik, B.S.</p>
-  <p class="role">Alumna</p>
-  <p class="bio">Madelynn obtained her Bachelor's in Psychological Science and a thematic minor in Cognitive Science. She is interested in neuropsychology and how brain stimulation can improve cognitive outcomes in individuals living with chronic pain.</p>
-</div>
+  <div class="tmslab-alumnus-row">
+    <div class="tmslab-alumnus-header">
+      <span class="tmslab-alumnus-name">Rudolph John Rodriguez, BS</span>
+      <span class="tmslab-alumnus-meta">Undergraduate Researcher &middot; 2020&ndash;2022</span>
+    </div>
+    <div class="tmslab-alumnus-now">PhD student in Physics</div>
+  </div>
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/spangler.jpg' | relative_url }}" alt="Tessa Spangler">
-  <p class="name">Tessa Spangler</p>
-  <p class="role">Alumna</p>
-  <p class="bio">Tessa graduated with her Bachelor of Science degrees in Biochemistry and Neuroscience. She works at TMC and runs a club (Giving a Little Arizona Magic) with children around Tucson.</p>
-</div>
+  <div class="tmslab-alumnus-row">
+    <div class="tmslab-alumnus-header">
+      <span class="tmslab-alumnus-name">Madelynn Orlik, BS</span>
+      <span class="tmslab-alumnus-meta">Undergraduate Researcher &middot; Years unknown</span>
+    </div>
+    <div class="tmslab-alumnus-now">Interests: neuropsychology and brain stimulation for chronic pain</div>
+  </div>
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/martinez.jpg' | relative_url }}" alt="Anthony Martinez">
-  <p class="name">Anthony Martinez, B.S.</p>
-  <p class="role">Alumnus</p>
-  <p class="bio">Anthony graduated with his Bachelor of Science in Psychological Science and is interested in becoming a D.O. in the future.</p>
-</div>
+  <div class="tmslab-alumnus-row">
+    <div class="tmslab-alumnus-header">
+      <span class="tmslab-alumnus-name">Tessa Spangler, BS</span>
+      <span class="tmslab-alumnus-meta">Undergraduate Researcher &middot; Years unknown</span>
+    </div>
+    <div class="tmslab-alumnus-now">Tucson Medical Center; founder of &ldquo;Giving a Little Arizona Magic&rdquo;</div>
+  </div>
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/lindstrom.jpg' | relative_url }}" alt="Alison Lindstrom">
-  <p class="name">Alison Lindstrom, B.S.</p>
-  <p class="role">Alumna</p>
-  <p class="bio">Alison is a sophomore at the University of Arizona pursuing a Bachelor's degree in Psychology with a minor in Criminology.</p>
-</div>
+  <div class="tmslab-alumnus-row">
+    <div class="tmslab-alumnus-header">
+      <span class="tmslab-alumnus-name">Anthony Martinez, BS</span>
+      <span class="tmslab-alumnus-meta">Undergraduate Researcher &middot; Years unknown</span>
+    </div>
+    <div class="tmslab-alumnus-now">Pre-medical (D.O. track)</div>
+  </div>
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/velu.jpg' | relative_url }}" alt="Priyanka Velu">
-  <p class="name">Priyanka Velu</p>
-  <p class="role">Alumna</p>
-  <p class="bio">Priyanka is a pre-medical undergraduate student at the Honors College studying Neuroscience and Cognitive Science with an emphasis in Aging and Development. Her research interests include neurodegenerative and neurological diseases.</p>
-</div>
+  <div class="tmslab-alumnus-row">
+    <div class="tmslab-alumnus-header">
+      <span class="tmslab-alumnus-name">Alison Lindstrom, BS</span>
+      <span class="tmslab-alumnus-meta">Undergraduate Researcher &middot; Years unknown</span>
+    </div>
+    <div class="tmslab-alumnus-now">Current position unknown</div>
+  </div>
 
-<div class="person-card">
-  <img src="{{ '/assets/img/people/baham.jpg' | relative_url }}" alt="Jonny Baham">
-  <p class="name">Jonny Baham, B.S.</p>
-  <p class="role">Alumnus</p>
-  <p class="bio">Jonny graduated with her Bachelor's degree in Neuroscience and Cognitive Science at the University of Arizona.</p>
-</div>
+  <div class="tmslab-alumnus-row">
+    <div class="tmslab-alumnus-header">
+      <span class="tmslab-alumnus-name">Priyanka Velu, BS</span>
+      <span class="tmslab-alumnus-meta">Undergraduate Researcher &middot; Years unknown</span>
+    </div>
+    <div class="tmslab-alumnus-now">Pre-medical, Honors College, University of Arizona</div>
+  </div>
+
+  <div class="tmslab-alumnus-row">
+    <div class="tmslab-alumnus-header">
+      <span class="tmslab-alumnus-name">Jonny Baham, BS</span>
+      <span class="tmslab-alumnus-meta">Undergraduate Researcher &middot; Years unknown</span>
+    </div>
+    <div class="tmslab-alumnus-now">Current position unknown</div>
+  </div>
 
 </div>
 

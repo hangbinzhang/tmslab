@@ -26,55 +26,18 @@ nav_order: 8
 
 <div class="tmslab-contact-page">
 
-  <h1>Contact</h1>
-  <p class="tmslab-contact-subtitle">For research inquiries, study participation, or to join the lab.</p>
+  <div class="tmslab-contact-top">
 
-  <section class="tmslab-contact-grid">
+    <h1>Contact</h1>
+    <p class="tmslab-contact-subtitle">For research inquiries, study participation, or to join the lab.</p>
 
-    <div class="tmslab-contact-info">
+    <p class="tmslab-themes-label">Send us a message</p>
 
-      <div class="tmslab-contact-block">
-        <h3><i class="fa-solid fa-phone" aria-hidden="true"></i> Phone</h3>
-        <p><a href="tel:+15206267755">(520) 626-7755</a></p>
-      </div>
-
-      <div class="tmslab-contact-block">
-        <h3><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</h3>
-        <p><a href="mailto:yinghuichou@arizona.edu">yinghuichou@arizona.edu</a></p>
-      </div>
-
-      <div class="tmslab-contact-block">
-        <h3><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Psychology Building</h3>
-        <address>
-          1503 East University Blvd.<br>
-          Tucson, AZ 85721
-        </address>
-      </div>
-
-      <div class="tmslab-contact-block">
-        <h3><i class="fa-solid fa-location-dot" aria-hidden="true"></i> TMS Laboratory</h3>
-        <address>
-          1230 N Cherry Ave<br>
-          Tucson, AZ 85719
-        </address>
-      </div>
-
-      <div class="tmslab-contact-block">
-        <h3><i class="fa-solid fa-clock" aria-hidden="true"></i> Office hours</h3>
-        <!-- TODO: Replace with real office hours when available. -->
-        <p>By appointment.</p>
-      </div>
-
+    <div id="tmslab-contact-success" class="tmslab-contact-success" hidden>
+      <strong>✓ Thanks — your message has been sent.</strong><br>We'll be in touch soon.
     </div>
 
-    <div class="tmslab-contact-form-wrap">
-
-      <p class="tmslab-contact-callout">For quickest response on study participation, please see our <a href="{{ '/join/' | relative_url }}">Join Us</a> page.</p>
-
-      <div id="tmslab-contact-success" class="tmslab-contact-success" hidden>
-        <strong>✓ Thanks — your message has been sent.</strong><br>We'll be in touch soon.
-      </div>
-
+    <div class="tmslab-form-card">
       <form id="tmslab-contact-form" class="tmslab-contact-form" action="https://formsubmit.co/yinghuichou@arizona.edu" method="POST">
 
         <!-- Honeypot for spam bots — hidden field that real users won't fill in. -->
@@ -118,32 +81,76 @@ nav_order: 8
 
         <button type="submit" class="tmslab-button">Send message</button>
       </form>
-
-      <p class="tmslab-contact-helper">Messages are sent directly to the lab and typically receive a response within a week.</p>
-
     </div>
 
-  </section>
+    <p class="tmslab-contact-helper">Messages are sent directly to the lab and typically receive a response within a week.</p>
+
+    <p class="tmslab-themes-label">Other ways to reach us</p>
+
+    <div class="tmslab-contact-info">
+      <div class="tmslab-contact-info-grid">
+        <div>
+          <div class="tmslab-contact-label">Phone</div>
+          <div class="tmslab-contact-value"><a href="tel:+15206267755">(520) 626-7755</a></div>
+        </div>
+        <div>
+          <div class="tmslab-contact-label">Email</div>
+          <div class="tmslab-contact-value"><a href="mailto:yinghuichou@arizona.edu">yinghuichou@arizona.edu</a></div>
+        </div>
+        <div>
+          <div class="tmslab-contact-label">Psychology Building</div>
+          <div class="tmslab-contact-value">1503 East University Blvd.<br>Tucson, AZ 85721</div>
+        </div>
+        <div>
+          <div class="tmslab-contact-label">TMS Laboratory</div>
+          <div class="tmslab-contact-value">1230 N Cherry Ave<br>Tucson, AZ 85719</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
   <section class="tmslab-contact-map">
 
-    <h2>Find us</h2>
+    <p class="tmslab-themes-label">Find us</p>
 
-    <div class="tmslab-contact-map-wrap">
-      <!--
-        Map shows both lab locations on the UA campus, using Google Maps'
-        directions embed (no API key needed). saddr = Psychology Building,
-        daddr = TMS Laboratory. The route between them gives users a sense
-        of how close the two sites are.
-      -->
-      <iframe
-        src="https://www.google.com/maps?saddr=1503+E+University+Blvd,+Tucson,+AZ+85721&daddr=1230+N+Cherry+Ave,+Tucson,+AZ+85719&output=embed"
-        title="Map of TMS Lab locations on the University of Arizona campus"
-        width="100%"
-        height="400"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        allowfullscreen></iframe>
+    <!--
+      Two single-pin map embeds, one per location. Uses Google Maps'
+      no-API-key `?q=...&output=embed` URL, which renders a plain
+      single-pin view without the directions sidebar or route line.
+    -->
+    <div class="tmslab-map-grid">
+
+      <div class="tmslab-map-card">
+        <p class="tmslab-map-name">Psychology Building</p>
+        <iframe
+          src="https://maps.google.com/maps?q=1503+E+University+Blvd,+Tucson,+AZ+85721&z=15&output=embed"
+          title="Psychology Building map"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+        <a class="tmslab-map-link"
+           href="https://www.google.com/maps/search/?api=1&query=1503+E+University+Blvd,+Tucson,+AZ+85721"
+           target="_blank" rel="noopener noreferrer">
+          Open in Maps &rarr;
+        </a>
+      </div>
+
+      <div class="tmslab-map-card">
+        <p class="tmslab-map-name">TMS Laboratory</p>
+        <iframe
+          src="https://maps.google.com/maps?q=1230+N+Cherry+Ave,+Tucson,+AZ+85719&z=15&output=embed"
+          title="TMS Laboratory map"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+        <a class="tmslab-map-link"
+           href="https://www.google.com/maps/search/?api=1&query=1230+N+Cherry+Ave,+Tucson,+AZ+85719"
+           target="_blank" rel="noopener noreferrer">
+          Open in Maps &rarr;
+        </a>
+      </div>
+
     </div>
 
   </section>
@@ -159,7 +166,6 @@ nav_order: 8
     var form = document.getElementById("tmslab-contact-form");
     if (banner) banner.hidden = false;
     if (form) form.hidden = true;
-    // Scroll the banner into view in case the form was below the fold.
     if (banner && banner.scrollIntoView) {
       banner.scrollIntoView({ behavior: "smooth", block: "center" });
     }

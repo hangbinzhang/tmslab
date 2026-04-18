@@ -2,26 +2,89 @@
 layout: page
 permalink: /join/
 title: Join Us
-description: Participate in one of our research studies or join the lab as a trainee.
 nav: true
 nav_order: 7
 ---
 
-## Participate in a Study
+Our lab conducts studies on memory, cognitive aging, and brain stimulation in adults aged 50&ndash;85. Review the active studies below, then reach out by phone, email, or our online inquiry form. [What is TMS? &rarr;](#what-is-tms)
 
-The Brain Imaging and TMS Laboratory conducts research on memory, cognitive aging, and brain stimulation. If you are interested in any of the studies below, please contact us at **[520-626-7755](tel:520-626-7755)** — leave your name, phone number, and email, and mention which study you're asking about.
+<p class="tmslab-themes-label">Active Studies</p>
 
-<div class="tmslab-inline-cta">
-  <a href="#" class="tmslab-button tmslab-button-large" data-tmslab-open-modal="participate" aria-haspopup="dialog">
-    Participate in a Study
-  </a>
+<div class="tmslab-study-card">
+  <h3>Interleaved TMS Study</h3>
+  <div class="tmslab-study-meta">
+    <span>Ages 55&ndash;85</span>
+    <span>&middot;</span>
+    <span>Two blocks, 3&ndash;4 visits each (longest visit 3.5 hours)</span>
+    <span>&middot;</span>
+    <span>Up to $400</span>
+  </div>
+  <p>A noninvasive TMS protocol to help attenuate cognitive decline in adults experiencing cognitive change, and to establish a dose-response relationship for TMS. Involves standard MRI, TMS, and a brief memory task.</p>
+  <p class="tmslab-study-eligibility"><strong>Eligibility:</strong> Healthy adults and individuals with mild cognitive impairment aged 55&ndash;85, right-handed. You cannot participate if you have a history of neurological disease, fainting, or seizures; any electrical or cochlear implant; implanted metal; recent drug withdrawal; are pregnant; or are currently taking psychoactive medications.</p>
 </div>
 
-> Each study below has been reviewed by an Institutional Review Board responsible for human subjects research at The University of Arizona and found to be acceptable, according to applicable state and federal regulations and University policies designed to protect the rights and welfare of participants in research.
+<div class="tmslab-study-card">
+  <h3>Hippocampal Plasticity Study</h3>
+  <div class="tmslab-study-meta">
+    <span>Ages 50&ndash;85</span>
+    <span>&middot;</span>
+    <span>Screening + three blocks of 11 visits over 6 months, plus a follow-up</span>
+    <span>&middot;</span>
+    <span>Up to $280 per stage</span>
+  </div>
+  <p>MRI-guided TMS to explore ways to prevent memory decline. Effectiveness is assessed with behavioral tests and MRI scans across a six-month period. Involves MRI, TMS, cognitive assessments, a genotype test, and body-worn devices.</p>
+  <p class="tmslab-study-eligibility"><strong>Eligibility:</strong> Healthy adults or adults with mild cognitive impairment aged 50&ndash;85, right-handed. You cannot participate if you have a history of neurological or psychiatric disease, fainting, Alzheimer's disease, or seizures; any electrical or cochlear implant; implanted metal; recent drug withdrawal; or were enrolled in another interventional study within the past 6 months.</p>
+</div>
 
-<section class="tmslab-video-section">
-  <h2>What is TMS?</h2>
-  <p class="tmslab-video-subtitle">A short introduction to transcranial magnetic stimulation &mdash; what it is, how it feels, and why we use it in our research.</p>
+<div class="tmslab-study-card">
+  <h3>EEG Study</h3>
+  <div class="tmslab-study-meta">
+    <span>Ages 50&ndash;85</span>
+    <span>&middot;</span>
+    <span>Screening + two blocks of one session each</span>
+    <span>&middot;</span>
+    <span>Up to $280 per stage</span>
+  </div>
+  <p>Noninvasive repetitive TMS (rTMS) protocols as a novel therapeutic tool to attenuate cognitive decline in adults at high risk for Alzheimer's disease. A step toward a clinically feasible noninvasive brain stimulation therapy for MCI and AD. Involves MRI, TMS, cognitive assessments, a genotype test, body-worn devices, and EEG.</p>
+  <p class="tmslab-study-eligibility"><strong>Eligibility:</strong> Healthy adults or adults with mild cognitive impairment aged 50&ndash;85, right-handed. Same exclusions as the Hippocampal Plasticity Study above.</p>
+</div>
+
+<div class="tmslab-study-card">
+  <h3>Gut Microbiome Study</h3>
+  <div class="tmslab-study-meta">
+    <span>Ages 50&ndash;85</span>
+    <span>&middot;</span>
+    <span>One instruction session + at-home sample drop-off</span>
+    <span>&middot;</span>
+    <span>$20</span>
+  </div>
+  <p>An emerging area of research into how the trillions of bacterial cells inhabiting the gut and mouth influence our health as we age. We analyze stool and saliva samples to evaluate how the microbiome shapes the aging brain.</p>
+  <p class="tmslab-study-eligibility"><strong>Eligibility:</strong> Healthy adults or adults with mild cognitive impairment aged 50&ndash;85, right-handed. Same exclusions as the Hippocampal Plasticity Study above.</p>
+</div>
+
+<p class="tmslab-irb-note">All studies are reviewed and approved by The University of Arizona Institutional Review Board.</p>
+
+<div class="tmslab-join-contact">
+  <h3>Ways to reach out</h3>
+  <div class="tmslab-join-contact-grid">
+    <div>
+      <div class="tmslab-contact-label">Phone</div>
+      <div class="tmslab-contact-value"><a href="tel:+15206267755">(520) 626-7755</a></div>
+    </div>
+    <div>
+      <div class="tmslab-contact-label">Email</div>
+      <div class="tmslab-contact-value"><a href="mailto:yinghuichou@arizona.edu">yinghuichou@arizona.edu</a></div>
+    </div>
+    <div>
+      <div class="tmslab-contact-label">Inquiry form</div>
+      <div class="tmslab-contact-value"><a href="#" data-tmslab-open-modal="participate" aria-haspopup="dialog">Fill out online &rarr;</a></div>
+    </div>
+  </div>
+</div>
+
+<div id="what-is-tms" class="tmslab-tms-intro">
+  <p class="tmslab-themes-label">What is TMS?</p>
+  <p>A short introduction to transcranial magnetic stimulation &mdash; what it is, how it feels, and why we use it in our research.</p>
 
   <div class="tmslab-video-wrapper">
     <iframe
@@ -30,114 +93,22 @@ The Brain Imaging and TMS Laboratory conducts research on memory, cognitive agin
       frameborder="0"
       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
-      loading="lazy"
-    ></iframe>
+      loading="lazy"></iframe>
   </div>
 
   <p class="tmslab-video-caption">
     Video credit: <a href="https://www.youtube.com/watch?v=RWJaaZoruyY" target="_blank" rel="noopener noreferrer">original source on YouTube</a>
   </p>
-</section>
+</div>
 
----
+<hr class="tmslab-divider">
 
-### Study #1 — Interleaved TMS Study (Ages 55–85)
+<p class="tmslab-themes-label">Join the Lab</p>
 
-**Purpose.** To develop a noninvasive Transcranial Magnetic Stimulation (TMS) protocol to help attenuate cognitive decline in adults who are experiencing cognitive decline, and to establish a dose-response relationship for TMS.
+We welcome applications from prospective graduate students, postdoctoral researchers, and undergraduates interested in cognitive neuroscience, transcranial magnetic stimulation, and neuroimaging research.
 
-**What does it involve?** Standard MRI, Transcranial Magnetic Stimulation (TMS), and a brief behavioral assessment (e.g., memory task).
+**Graduate students** &mdash; apply through the [Psychology Ph.D. program](https://psychology.arizona.edu/graduate) at the University of Arizona.
 
-**Who can participate?** Healthy adults and individuals with mild cognitive impairment aged 55–85. Male or female. Must be right-handed.
+**Postdoctoral researchers** &mdash; email Dr. Chou directly at [yinghuichou@arizona.edu](mailto:yinghuichou@arizona.edu) with your CV and research interests.
 
-You will be unable to participate if any of the following apply:
-- History of neurological disease, fainting, or seizures
-- Any electrical implant
-- Cochlear implant
-- You are pregnant
-- Recent drug withdrawal
-- Have any implanted metal in your body
-- You are currently taking any psychoactive medications (e.g., anti-depressants)
-
-**Time Commitment.** Two blocks, each consisting of 3–4 visits. The longest visit is 3.5 hours.
-
-**Compensation.** Up to **$400** for completing the study.
-
-**Contact.** [520-626-7755](tel:520-626-7755) — ask about the **Interleaved TMS Study**.
-
----
-
-### Study #2 — Hippocampal Plasticity Study (Ages 50–85)
-
-**Purpose.** We use MRI-guided Transcranial Magnetic Stimulation (TMS) to explore ways to prevent memory decline. To assess its effectiveness, we use behavioral tests and conduct MRI scans over a six-month period as part of our research protocol.
-
-**What does it involve?** MRI scan, TMS, cognitive assessment (e.g., memory task), genotype test, and assessments with body-worn devices.
-
-**Who can participate?** Healthy adults or adults with mild cognitive impairment aged 50–85. Male or female. Must be right-handed.
-
-You will be unable to participate if any of the following apply:
-- History of neurological and psychiatric disease, fainting, Alzheimer's disease, or seizures
-- Any electrical implant
-- Cochlear implant
-- Recent drug withdrawal
-- Have any implanted metal in your body
-- Enrolled in another interventional study within 6 months prior to beginning this study
-
-**Time Commitment.** Initial screening session, three blocks of 11 visits each over a six-month period, and a follow-up.
-
-**Compensation.** Up to **$180 or $220** in total for completing Stage I and up to **$280** in total for completing Stage II, depending on the number of hours participating in our projects.
-
-**Contact.** [520-626-7755](tel:520-626-7755) — ask about the **Hippocampal Plasticity Study**.
-
----
-
-### Study #3 — EEG Study (Ages 50–85)
-
-**Purpose.** To develop non-invasive repetitive transcranial magnetic stimulation (rTMS) protocols as a novel therapeutic tool to attenuate cognitive decline in adults identified as high-risk for developing Alzheimer's Disease. This project represents a potential step forward in the development of a clinically feasible noninvasive brain stimulation therapy for individuals with mild cognitive impairment and Alzheimer's disease.
-
-**What does it involve?** MRI scan, TMS, cognitive assessment (e.g., memory task), genotype test, assessments with body-worn devices, and EEG.
-
-**Who can participate?** Healthy adults or adults with mild cognitive impairment aged 50–85. Male or female. Must be right-handed.
-
-You will be unable to participate if any of the following apply:
-- History of neurological and psychiatric disease, fainting, Alzheimer's disease, or seizures
-- Any electrical implant
-- Cochlear implant
-- Recent drug withdrawal
-- Have any implanted metal in your body
-- Enrolled in another interventional study within 6 months prior to beginning this study
-
-**Time Commitment.** Initial screening, two blocks of 1 session each.
-
-**Compensation.** Up to **$260** in total for completing Stage I and up to **$280** in total for completing Stage II, depending on the number of hours participating in our projects.
-
-**Contact.** [520-626-7755](tel:520-626-7755) — ask about the **EEG Study**.
-
----
-
-### Study #4 — Gut Microbiome Study (Ages 50–85)
-
-**Purpose.** An exciting new area of research explores how the trillions of bacterial cells inhabiting the gut and mouth influence our health as we age. In this study component, we analyze the trillions of bacteria inhabiting your gut and mouth via stool and saliva samples, respectively, to evaluate their influence on the aging brain.
-
-**What does it involve?** At-home collection of saliva and stool samples.
-
-**Who can participate?** Healthy adults or adults with mild cognitive impairment aged 50–85. Male or female. Must be right-handed.
-
-You will be unable to participate if any of the following apply:
-- History of neurological and psychiatric disease, fainting, Alzheimer's disease, or seizures
-- Any electrical implant
-- Cochlear implant
-- Recent drug withdrawal
-- Have any implanted metal in your body
-- Enrolled in another interventional study within 6 months prior to beginning this study
-
-**Time Commitment.** One session of instructions, and dropping off sample after collection.
-
-**Compensation.** **$20**.
-
-**Contact.** [520-626-7755](tel:520-626-7755) — ask about the **Gut Microbiome Study**.
-
----
-
-## Join the Lab
-
-We welcome applications from prospective graduate students, postdoctoral researchers, and undergraduate volunteers interested in brain stimulation, neuroimaging, and cognitive neuroscience. If you are interested in joining the lab, please email Dr. Chou at [yinghuichou@arizona.edu](mailto:yinghuichou@arizona.edu) with your CV and a brief statement of research interests.
+**Undergraduates** &mdash; reach out with your CV and a brief statement of interest.
