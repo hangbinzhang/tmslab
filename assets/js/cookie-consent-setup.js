@@ -96,7 +96,7 @@ function initializeCookieConsent() {
               },
               {
                 title: 'More information',
-                description: 'For any queries in relation to our policy on cookies and your choices, please <a class="cc-link" href="https://hangbinzhang.github.io/tmslab/#contact">contact us</a>.'
+                description: 'For any queries in relation to our policy on cookies and your choices, please <a class="cc-link" href="https://brain-imaging-and-tms-laboratory.github.io/tmslab/#contact">contact us</a>.'
               }
             ]
           }

@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://hangbinzhang.github.io/tmslab/sitemap.xml
+Sitemap: https://brain-imaging-and-tms-laboratory.github.io/tmslab/sitemap.xml

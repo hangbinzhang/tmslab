@@ -152,12 +152,7 @@ ninja.data = [{
           section: "News",},{id: "news-new-publications-in-2024-sundman-et-al-aging-brain-and-hall-et-al-geroscience-on-tms-derived-biomarkers-and-tms-eeg-approaches-to-mci-and-alzheimer-s",
           title: 'New publications in 2024! Sundman et al. (Aging Brain) and Hall et al....',
           description: "",
-          section: "News",},{id: "projects-research-area-title",
-          title: 'Research area title',
-          description: "One-line description of this research area.",
-          section: "Projects",handler: () => {
-              window.location.href = "/tmslab/projects/1_project/";
-            },},{
+          section: "News",},{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
