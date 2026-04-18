@@ -1702,23 +1702,10 @@ html[data-theme="dark"] .tmslab-grant-card {
    form as a CTA. Rule deleted; if a similar notice is ever
    needed, re-add with a quieter treatment (no terracotta bar). */
 
-.tmslab-contact-success {
-  font-size: 1rem;
-  color: var(--tmslab-ink);
-  background: var(--tmslab-cream);
-  border: 1px solid var(--tmslab-clay);
-  padding: 1.25rem;
-  border-radius: 4px;
-  text-align: center;
-  margin: 0 0 1.5rem;
-  font-weight: 500;
-  max-width: none;
-}
-
-/* White surface card wrapping the contact form. The cream
-   page background + bare inputs previously read as "unfinished";
-   the card gives the form a defined surface so the terracotta
-   submit button at the bottom reads as a clean call to action. */
+/* White surface card wrapping the contact CTA. Cream page
+   background under a bare intro/button read as "unfinished";
+   the card gives the CTA a defined surface so the terracotta
+   button reads as a clean call to action. */
 .tmslab-form-card {
   background: #ffffff;
   border-radius: 8px;
@@ -1739,89 +1726,77 @@ html[data-theme="dark"] .tmslab-form-card {
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
 }
 
-.tmslab-contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.tmslab-form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-/* Form labels — quiet ink-soft small caps, matching the contact
-   info labels on the left column. Terracotta on this page is
-   reserved for: input focus state + submit button + link hovers. */
-.tmslab-form-label {
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--tmslab-ink-soft);
-}
-
-.tmslab-contact-form input[type="text"],
-.tmslab-contact-form input[type="email"],
-.tmslab-contact-form select {
-  border: none;
-  border-bottom: 1px solid var(--tmslab-sand);
-  background: transparent;
-  padding: 0.7rem 0.25rem;
-  font-size: 1rem;
-  color: var(--tmslab-ink);
-  font-family: inherit;
-  line-height: 1.45;
-  outline: none;
-  transition: border-color 0.18s ease, border-width 0.18s ease;
+/* Microsoft Forms iframe embed — shared wrapper for the contact
+   page form-card and the participate-modal body. The sand-light
+   background shows through while the iframe is still loading so
+   the card doesn't flash white-on-white. */
+.tmslab-embed-wrap {
+  position: relative;
   width: 100%;
-  box-sizing: border-box;
+  background: var(--tmslab-sand-light, #efe6d6);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 1.25rem 0;
 }
 
-/* Custom select chevron — terracotta, no native browser arrow. */
-.tmslab-contact-form select {
-  appearance: none;
-  -webkit-appearance: none;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23a0522d'><path d='M4 6l4 4 4-4z'/></svg>");
-  background-repeat: no-repeat;
-  background-position: right 0.5rem center;
-  background-size: 14px 14px;
-  padding-right: 2rem;
-  cursor: pointer;
-}
-
-.tmslab-contact-form textarea {
-  border: 1px solid var(--tmslab-sand);
-  border-radius: 4px;
+.tmslab-embed-wrap iframe {
+  display: block;
+  width: 100%;
+  border: 0;
   background: transparent;
-  padding: 0.85rem;
+}
+
+/* Contact page embed — taller since it's a standalone form. */
+.tmslab-embed-wrap--contact iframe {
+  height: 720px;
+}
+
+/* Modal embed — slightly shorter to fit the modal viewport. */
+.tmslab-embed-wrap--modal iframe {
+  height: 620px;
+}
+
+/* Widen the modal when it carries an embedded form so the
+   Microsoft Forms layout has room to breathe. Older browsers
+   without :has() support fall back to the default modal width. */
+.tmslab-modal-card:has(.tmslab-embed-wrap--modal) {
+  max-width: 700px;
+}
+
+/* Mobile: iframes need more vertical space since form fields
+   stack. If the form still overflows, users get an internal
+   scrollbar inside the iframe — acceptable. */
+@media (max-width: 640px) {
+  .tmslab-embed-wrap--contact iframe {
+    height: 800px;
+  }
+
+  .tmslab-embed-wrap--modal iframe {
+    height: 700px;
+  }
+}
+
+.tmslab-form-intro {
   font-size: 1rem;
-  color: var(--tmslab-ink);
-  font-family: inherit;
+  line-height: 1.65;
+  color: var(--tmslab-ink, #2c2416);
+  margin: 0 0 1rem;
+  max-width: none;
+}
+
+.tmslab-form-note {
+  font-size: 0.82rem;
+  color: var(--tmslab-ink-soft, #5a4a36);
+  font-style: italic;
+  margin: 1rem 0 0;
   line-height: 1.5;
-  resize: vertical;
-  min-height: 140px;
-  outline: none;
-  transition: border-color 0.18s ease;
-  width: 100%;
-  box-sizing: border-box;
+  max-width: none;
 }
 
-.tmslab-contact-form input:focus,
-.tmslab-contact-form select:focus {
-  border-bottom-color: var(--tmslab-clay);
-  border-bottom-width: 2px;
-  /* Keep total height stable: subtract 1px from padding to compensate. */
-  padding-bottom: calc(0.7rem - 1px);
-}
-
-.tmslab-contact-form textarea:focus {
-  border-color: var(--tmslab-clay);
-  box-shadow: inset 0 -1px 0 var(--tmslab-clay);
-}
-
-/* Submit button */
+/* Primary button. No current callers after the Microsoft Forms
+   iframe switch (contact + participate now embed directly). Kept
+   as a reusable token for future inline CTAs; PurgeCSS strips it
+   in production if it stays unused. */
 .tmslab-button {
   display: inline-block;
   background: var(--tmslab-clay);
@@ -1844,14 +1819,6 @@ html[data-theme="dark"] .tmslab-form-card {
   background: var(--tmslab-link);
   transform: translateY(-2px);
   box-shadow: 0 8px 18px rgba(44, 36, 22, 0.18);
-}
-
-.tmslab-contact-helper {
-  font-size: 0.85rem;
-  color: var(--tmslab-ink-soft);
-  font-style: italic;
-  margin: 1.25rem 0 0;
-  max-width: none;
 }
 
 /* --- Map section (two side-by-side single-pin embeds) --- */
@@ -2029,88 +1996,6 @@ html[data-theme="dark"] .tmslab-form-card {
   max-width: none;
 }
 
-.tmslab-modal-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-/* Side-by-side rows (first/last name, email/phone). */
-.tmslab-form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-@media (max-width: 540px) {
-  .tmslab-form-row {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Reuse the contact-page form-field style; the .tmslab-form-field
-   and .tmslab-form-label classes are defined in section 12.
-   Inputs/select/textarea share the same selectors as the contact
-   form so we re-target them here, scoped to the modal. */
-
-.tmslab-modal-form input[type="text"],
-.tmslab-modal-form input[type="email"],
-.tmslab-modal-form input[type="tel"],
-.tmslab-modal-form select {
-  border: none;
-  border-bottom: 1px solid var(--tmslab-sand);
-  background: transparent;
-  padding: 0.55rem 0.25rem;
-  font-size: 0.95rem;
-  color: var(--tmslab-ink);
-  font-family: inherit;
-  line-height: 1.45;
-  outline: none;
-  transition: border-color 0.18s ease, border-width 0.18s ease;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.tmslab-modal-form select {
-  appearance: none;
-  -webkit-appearance: none;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23a0522d'><path d='M4 6l4 4 4-4z'/></svg>");
-  background-repeat: no-repeat;
-  background-position: right 0.5rem center;
-  background-size: 14px 14px;
-  padding-right: 2rem;
-  cursor: pointer;
-}
-
-.tmslab-modal-form textarea {
-  border: 1px solid var(--tmslab-sand);
-  border-radius: 4px;
-  background: transparent;
-  padding: 0.7rem;
-  font-size: 0.95rem;
-  color: var(--tmslab-ink);
-  font-family: inherit;
-  line-height: 1.5;
-  resize: vertical;
-  min-height: 80px;
-  outline: none;
-  transition: border-color 0.18s ease;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.tmslab-modal-form input:focus,
-.tmslab-modal-form select:focus {
-  border-bottom-color: var(--tmslab-clay);
-  border-bottom-width: 2px;
-  padding-bottom: calc(0.55rem - 1px);
-}
-
-.tmslab-modal-form textarea:focus {
-  border-color: var(--tmslab-clay);
-  box-shadow: inset 0 -1px 0 var(--tmslab-clay);
-}
-
 .tmslab-modal-note {
   font-size: 0.78rem;
   color: var(--tmslab-ink-soft);
@@ -2171,7 +2056,12 @@ body.modal-open {
 }
 
 /* ====================================================
-   16. Toast — confirmation after Formsubmit redirect
+   16. Toast — generic bottom-center notification.
+   Currently only fired by participate-modal.js on a
+   `?participation_sent=1` query param (legacy hook from
+   the Formsubmit era; the Microsoft Forms flow doesn't
+   redirect back, so the toast is effectively dormant
+   unless a bookmarked URL carries the param).
    ==================================================== */
 
 .tmslab-toast {
@@ -2316,6 +2206,27 @@ body.modal-open {
 .tmslab-gallery-item:focus-within .tmslab-gallery-caption {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Caption title sits above, optional date label below in smaller
+   uppercase. Emitted from _pages/gallery.md based on the
+   YYYY-MM-DD_ filename prefix — files without a date prefix omit
+   the date span entirely. */
+.tmslab-gallery-caption-title {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.tmslab-gallery-caption-date {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.85;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2689,62 +2600,124 @@ html[data-theme="dark"] .tmslab-study-card {
   max-width: none;
 }
 
-/* "Ways to reach out" — 3-column unified contact row.
-   Equal weight, no shouty buttons. */
-.tmslab-join-contact {
+/* "Ready to participate?" — big terracotta CTA. Target audience
+   is 50-85, so the button is oversized by typical web standards
+   (1.2rem type, 280px min-width, full-bleed on mobile) to read
+   as a clear tap target. Phone/email fallback sits underneath
+   separated by a sand-light divider. */
+.tmslab-reach-out {
   margin: 3rem 0 2rem;
+  text-align: center;
 }
 
-.tmslab-join-contact h3 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--tmslab-ink, #2c2416);
-  margin: 0 0 1.25rem;
-}
-
-.tmslab-join-contact-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-@media (max-width: 720px) {
-  .tmslab-join-contact-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-}
-
-/* Label + value pair used by the Ways-to-reach-out block.
-   Label: small uppercase terracotta caption. Value: body
-   text, with links picking up the terracotta on hover via
-   the global link rules. */
-.tmslab-join-contact .tmslab-contact-label {
-  font-size: 0.72rem;
+.tmslab-reach-out h3 {
+  font-size: 1.5rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--tmslab-clay, #b8654a);
-  margin-bottom: 0.35rem;
-}
-
-.tmslab-join-contact .tmslab-contact-value {
-  font-size: 0.95rem;
   color: var(--tmslab-ink, #2c2416);
-  line-height: 1.4;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.005em;
 }
 
-.tmslab-join-contact .tmslab-contact-value a {
+.tmslab-reach-out-lead {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--tmslab-ink-soft, #5a4a36);
+  max-width: 560px;
+  margin: 0 auto 2rem;
+}
+
+.tmslab-reach-out-button {
+  display: inline-block;
+  background: var(--tmslab-clay, #b8654a);
+  color: var(--tmslab-cream, #faf7f2);
+  padding: 1.25rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.18s ease, transform 0.18s ease,
+    box-shadow 0.18s ease;
+  box-shadow: 0 4px 14px rgba(184, 101, 74, 0.25);
+  min-width: 280px;
+}
+
+.tmslab-reach-out-button:hover,
+.tmslab-reach-out-button:focus {
+  background: var(--tmslab-link, #a0522d);
+  color: var(--tmslab-cream, #faf7f2);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(184, 101, 74, 0.35);
+  text-decoration: none;
+}
+
+.tmslab-reach-out-alt {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--tmslab-sand-light, #efe6d6);
+}
+
+.tmslab-reach-out-alt-label {
+  font-size: 0.95rem;
+  color: var(--tmslab-ink-soft, #5a4a36);
+  margin: 0 0 1.25rem;
+  max-width: none;
+}
+
+.tmslab-reach-out-contacts {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.tmslab-reach-out-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.tmslab-reach-out-contact-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--tmslab-clay, #b8654a);
+}
+
+.tmslab-reach-out-contact-value {
+  font-size: 1.1rem;
+  font-weight: 500;
   color: var(--tmslab-ink, #2c2416);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.18s ease, color 0.18s ease;
 }
 
-.tmslab-join-contact .tmslab-contact-value a:hover,
-.tmslab-join-contact .tmslab-contact-value a:focus {
+.tmslab-reach-out-contact-value:hover,
+.tmslab-reach-out-contact-value:focus {
   color: var(--tmslab-clay, #b8654a);
   border-bottom-color: var(--tmslab-clay, #b8654a);
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .tmslab-reach-out-button {
+    width: 100%;
+    min-width: 0;
+    padding: 1.15rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .tmslab-reach-out-contacts {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .tmslab-reach-out h3 {
+    font-size: 1.3rem;
+  }
 }
 
 /* "What is TMS?" intro block — tighter than the old

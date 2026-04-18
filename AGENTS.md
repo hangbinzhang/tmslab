@@ -14,7 +14,7 @@ Live URL: https://brain-imaging-and-tms-laboratory.github.io/tmslab/
 
 ## Critical config (`_config.yml`)
 
-- `url: https://brain-imaging-and-tms-laboratory.github.io` + `baseurl: /tmslab` — these must be paired. Any change to the org or repo name needs BOTH updated here AND in the Formsubmit `_next` redirects (see below).
+- `url: https://brain-imaging-and-tms-laboratory.github.io` + `baseurl: /tmslab` — these must be paired. If the org or repo name changes, update both.
 - `search_enabled: false` — global ⌘K nav search is intentionally off.
 - `bib_search: true` — the filter input on the Publications page. Must stay true or the filter disappears.
 - `max_author_limit: 10` — authors shown before "et al." truncation in publication entries. Must be an explicit number; blank is treated as truthy and collapses every entry.
@@ -76,12 +76,16 @@ Greedy patterns `/^font-size-/` and `/^is-/` catch future additions. When adding
 
 ## Contact forms
 
-Both forms use [Formsubmit.co](https://formsubmit.co) with Dr. Chou's email as the action target — no API key required.
+Both the Contact page (`_pages/contact.md`) and the Participate-in-a-study modal (`_includes/participate_modal.liquid`) render a short intro + an embedded Microsoft Forms `<iframe>` (with `&embed=true` on the URL) + a privacy note. No site-side form state or backend.
 
-- Contact page: `_pages/contact.md`
-- Participate-in-a-study modal: `_includes/participate_modal.liquid`
+- **Contact form:** `https://forms.office.com/...UM0hWNTAxTVZTV1I1VFE4NTRSMklOUkc3WS4u&embed=true`
+- **Study interest form:** `https://forms.office.com/...UNEpENzY5MVpCQ0JOMzNBWlY4VFVXS1JaSi4u&embed=true`
 
-Both contain a hidden `<input name="_next" value="...">` pointing to the deployed URL. If the domain ever changes, update BOTH `_next` values AND `url:` in `_config.yml`.
+Dr. Chou (or whoever owns the Microsoft Forms) receives submissions directly in the Forms responses dashboard. Shared iframe CSS lives in `_sass/_tmslab.scss` under `.tmslab-embed-wrap` (base + modifiers `--contact` / `--modal`), `.tmslab-form-intro`, `.tmslab-form-note`. The modal widens to 700px when it contains an embed via `.tmslab-modal-card:has(.tmslab-embed-wrap--modal)` — older browsers without `:has()` just get the default modal width.
+
+If a URL changes, update it in both the Liquid file and the Markdown file; no other wiring is needed. Iframe heights are fixed (720px contact / 620px modal, 800px / 700px mobile); if Microsoft Forms lengthens either form, bump those heights. The CSP `frame-src 'self' https:` in `head.liquid` already permits the embed.
+
+Legacy Formsubmit history (honeypot, `_captcha`, `_next`, inline success banner, `?sent=1` / `?participation_sent=1` toast hooks) has been removed from both pages — the toast JS in `assets/js/participate-modal.js` is dormant unless someone visits a URL carrying `?participation_sent=1`.
 
 ## News ticker
 

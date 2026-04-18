@@ -7,21 +7,8 @@ nav_order: 8
 ---
 
 <!--
-  NOTE TO USER (Hangbin):
-  This contact form uses Formsubmit.co to forward submissions to yinghuichou@arizona.edu.
-
-  FIRST-TIME ACTIVATION REQUIRED:
-  1. Submit the form ONCE with any test message after deployment.
-  2. Formsubmit will send an activation email to yinghuichou@arizona.edu.
-  3. Dr. Chou must click the activation link in that email ONE TIME.
-  4. After activation, all future submissions work automatically.
-
-  OPTIONAL: To hide Dr. Chou's email from the page source (anti-scraper), you can
-  replace the form action with a Formsubmit hash URL. Visit https://formsubmit.co,
-  enter yinghuichou@arizona.edu, get the hashed URL (e.g., formsubmit.co/abc123xyz),
-  and replace the form action attribute.
-
-  No account required. Free tier: unlimited submissions.
+  Contact page. The form itself lives on Microsoft Forms; this page
+  only provides a branded intro + CTA that opens the form in a new tab.
 -->
 
 <div class="tmslab-contact-page">
@@ -33,57 +20,30 @@ nav_order: 8
 
     <p class="tmslab-themes-label">Send us a message</p>
 
-    <div id="tmslab-contact-success" class="tmslab-contact-success" hidden>
-      <strong>✓ Thanks — your message has been sent.</strong><br>We'll be in touch soon.
-    </div>
-
     <div class="tmslab-form-card">
-      <form id="tmslab-contact-form" class="tmslab-contact-form" action="https://formsubmit.co/yinghuichou@arizona.edu" method="POST">
+      <p class="tmslab-form-intro">
+        Have a question about our research, collaboration opportunities, or media inquiries? Send us a message below and we'll get back to you.
+      </p>
 
-        <!-- Honeypot for spam bots — hidden field that real users won't fill in. -->
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="tmslab-embed-wrap tmslab-embed-wrap--contact">
+        <iframe
+          src="https://forms.office.com/Pages/ResponsePage.aspx?id=BVXjXo7rKUmTfWRd9QEyiPL1skBrvjpLpZ4PYOiQ35pUM0hWNTAxTVZTV1I1VFE4NTRSMklOUkc3WS4u&embed=true"
+          title="Contact form"
+          frameborder="0"
+          marginwidth="0"
+          marginheight="0"
+          allowfullscreen
+          webkitallowfullscreen
+          mozallowfullscreen
+          msallowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
 
-        <!-- Disable Formsubmit's CAPTCHA for a smoother UX. -->
-        <input type="hidden" name="_captcha" value="false">
-
-        <!-- Subject prefix so Dr. Chou can filter inbox. -->
-        <input type="hidden" name="_subject" value="TMS Lab website inquiry">
-
-        <!-- After-submit redirect with a flag the success banner JS reads. -->
-        <input type="hidden" name="_next" value="https://brain-imaging-and-tms-laboratory.github.io/tmslab/contact/?sent=1">
-
-        <label class="tmslab-form-field">
-          <span class="tmslab-form-label">Name</span>
-          <input type="text" name="name" required autocomplete="name">
-        </label>
-
-        <label class="tmslab-form-field">
-          <span class="tmslab-form-label">Email</span>
-          <input type="email" name="email" required autocomplete="email">
-        </label>
-
-        <label class="tmslab-form-field">
-          <span class="tmslab-form-label">Subject</span>
-          <select name="inquiry_type" required>
-            <option value="">Select…</option>
-            <option>Study participation</option>
-            <option>Joining the lab</option>
-            <option>Research collaboration</option>
-            <option>Media / press</option>
-            <option>General inquiry</option>
-          </select>
-        </label>
-
-        <label class="tmslab-form-field">
-          <span class="tmslab-form-label">Message</span>
-          <textarea name="message" rows="6" required></textarea>
-        </label>
-
-        <button type="submit" class="tmslab-button">Send message</button>
-      </form>
+      <p class="tmslab-form-note">
+        Your information will be used only to respond to your inquiry. We do not share contact information with third parties.
+      </p>
     </div>
-
-    <p class="tmslab-contact-helper">Messages are sent directly to the lab and typically receive a response within a week.</p>
 
     <p class="tmslab-themes-label">Other ways to reach us</p>
 
@@ -156,18 +116,3 @@ nav_order: 8
   </section>
 
 </div>
-
-<script>
-  // Success banner toggle: if redirected back with ?sent=1, hide the form
-  // and reveal the thank-you banner. Pure vanilla, no dependencies.
-  (function () {
-    if (window.location.search.indexOf("sent=1") === -1) return;
-    var banner = document.getElementById("tmslab-contact-success");
-    var form = document.getElementById("tmslab-contact-form");
-    if (banner) banner.hidden = false;
-    if (form) form.hidden = true;
-    if (banner && banner.scrollIntoView) {
-      banner.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
-  })();
-</script>

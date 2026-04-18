@@ -40,23 +40,17 @@ nav_order: 4
   <div class="tmslab-member-card">
     <img src="{{ '/assets/img/people/sundman.jpg' | relative_url }}" alt="Mark Sundman" class="tmslab-member-photo">
     <h3 class="tmslab-member-name">Mark Sundman, M.S., Ph.D.</h3>
-    <span class="tmslab-member-role">Postdoctoral Associate</span>
+    <span class="tmslab-member-role">Research Scientist</span>
     <p class="tmslab-member-bio">Ph.D. in Psychology (Cognition and Neural Systems), University of Arizona. M.S. in Integrative Medicine, George Washington University.</p>
-    <div class="tmslab-member-links">
-      <!-- TODO: Update href with real CV URL when available -->
-      <a class="tmslab-member-link" href="#" target="_blank" rel="noopener">CV</a>
-    </div>
+    <div class="tmslab-member-links"></div>
   </div>
 
   <div class="tmslab-member-card">
     <img src="{{ '/assets/img/people/liu_yilin.jpg' | relative_url }}" alt="Yilin Liu" class="tmslab-member-photo">
     <h3 class="tmslab-member-name">Yilin Liu, M.S., Ph.D.</h3>
-    <span class="tmslab-member-role">Postdoctoral Associate</span>
+    <span class="tmslab-member-role">Research Scientist</span>
     <p class="tmslab-member-bio">Ph.D. in CNS Psychology, University of Arizona.</p>
-    <div class="tmslab-member-links">
-      <!-- TODO: Update href with real CV URL when available -->
-      <a class="tmslab-member-link" href="#" target="_blank" rel="noopener">CV</a>
-    </div>
+    <div class="tmslab-member-links"></div>
   </div>
 
   <div class="tmslab-member-card">
@@ -77,7 +71,7 @@ nav_order: 4
 
   <div class="tmslab-member-card">
     <img src="{{ '/assets/img/people/hall_jd.jpg' | relative_url }}" alt="JD Hall" class="tmslab-member-photo">
-    <h3 class="tmslab-member-name">John David (JD) Hall, M.S.</h3>
+    <h3 class="tmslab-member-name">JD Hall, M.S., Ph.D.</h3>
     <span class="tmslab-member-role">Ph.D. Candidate</span>
     <p class="tmslab-member-bio">M.A. in Psychology, University of Indianapolis. B.A. in Psychology, Indiana University &ndash; Purdue University Indianapolis.</p>
     <div class="tmslab-member-links"></div>
@@ -145,7 +139,6 @@ nav_order: 4
 
 <!--
   TODO: Hangbin / Dr. Chou to verify these entries:
-  - Year ranges — many are currently placeholders "Years unknown"
   - "Now at" entries — fill in current institution/position where possible
   - Order — currently listed by departure (newest first, roughly).
     Adjust if a different ordering makes more sense.
@@ -160,7 +153,7 @@ nav_order: 4
   <div class="tmslab-alumnus-row">
     <div class="tmslab-alumnus-header">
       <span class="tmslab-alumnus-name">Yu-Chin (Allison) Chen, MS, MD, PhD</span>
-      <span class="tmslab-alumnus-meta">Postdoctoral Associate &middot; 2021&ndash;2024</span>
+      <span class="tmslab-alumnus-meta">Postdoctoral Associate</span>
     </div>
     <div class="tmslab-alumnus-now">Physician, Taiwan</div>
   </div>
@@ -168,7 +161,7 @@ nav_order: 4
   <div class="tmslab-alumnus-row">
     <div class="tmslab-alumnus-header">
       <span class="tmslab-alumnus-name">Christopher Trapani, BS</span>
-      <span class="tmslab-alumnus-meta">Medical Student Researcher &middot; 2023&ndash;2024</span>
+      <span class="tmslab-alumnus-meta">Medical Student Researcher</span>
     </div>
     <div class="tmslab-alumnus-now">Medical student, University of Arizona</div>
   </div>
@@ -176,7 +169,7 @@ nav_order: 4
   <div class="tmslab-alumnus-row">
     <div class="tmslab-alumnus-header">
       <span class="tmslab-alumnus-name">Lisbeth Haaheim, BS</span>
-      <span class="tmslab-alumnus-meta">Clinical Research Coordinator &middot; Years unknown</span>
+      <span class="tmslab-alumnus-meta">Clinical Research Coordinator</span>
     </div>
     <div class="tmslab-alumnus-now">Clinical research</div>
   </div>
@@ -184,7 +177,7 @@ nav_order: 4
   <div class="tmslab-alumnus-row">
     <div class="tmslab-alumnus-header">
       <span class="tmslab-alumnus-name">Hannah Siu, BS</span>
-      <span class="tmslab-alumnus-meta">Research Data Support Specialist &middot; Years unknown</span>
+      <span class="tmslab-alumnus-meta">Research Data Support Specialist</span>
     </div>
     <div class="tmslab-alumnus-now">MS candidate, Medical Nutrition, Arizona State University</div>
   </div>
@@ -192,7 +185,7 @@ nav_order: 4
   <div class="tmslab-alumnus-row">
     <div class="tmslab-alumnus-header">
       <span class="tmslab-alumnus-name">Catherine Jezerc, BS</span>
-      <span class="tmslab-alumnus-meta">Undergraduate Researcher &middot; Years unknown</span>
+      <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
     </div>
     <div class="tmslab-alumnus-now">Recent graduate</div>
   </div>
@@ -200,7 +193,7 @@ nav_order: 4
   <div class="tmslab-alumnus-row">
     <div class="tmslab-alumnus-header">
       <span class="tmslab-alumnus-name">Koeun Lim, PhD</span>
-      <span class="tmslab-alumnus-meta">Data Scientist &middot; 2019&ndash;2021</span>
+      <span class="tmslab-alumnus-meta">Data Scientist</span>
     </div>
     <div class="tmslab-alumnus-now">Industry data scientist</div>
   </div>
@@ -208,7 +201,7 @@ nav_order: 4
   <div class="tmslab-alumnus-row">
     <div class="tmslab-alumnus-header">
       <span class="tmslab-alumnus-name">Viet Ton That, BS</span>
-      <span class="tmslab-alumnus-meta">Research Assistant &middot; Years unknown</span>
+      <span class="tmslab-alumnus-meta">Research Assistant</span>
     </div>
     <div class="tmslab-alumnus-now">Post-graduate (details unknown)</div>
   </div>
@@ -216,7 +209,7 @@ nav_order: 4
   <div class="tmslab-alumnus-row">
     <div class="tmslab-alumnus-header">
       <span class="tmslab-alumnus-name">Bernadette De Vault, MS</span>
-      <span class="tmslab-alumnus-meta">Research Coordinator &middot; Years unknown</span>
+      <span class="tmslab-alumnus-meta">Research Coordinator</span>
     </div>
     <div class="tmslab-alumnus-now">Clinical research / public health</div>
   </div>
@@ -224,7 +217,7 @@ nav_order: 4
   <div class="tmslab-alumnus-row">
     <div class="tmslab-alumnus-header">
       <span class="tmslab-alumnus-name">Rudolph John Rodriguez, BS</span>
-      <span class="tmslab-alumnus-meta">Undergraduate Researcher &middot; 2020&ndash;2022</span>
+      <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
     </div>
     <div class="tmslab-alumnus-now">PhD student in Physics</div>
   </div>
@@ -232,7 +225,7 @@ nav_order: 4
   <div class="tmslab-alumnus-row">
     <div class="tmslab-alumnus-header">
       <span class="tmslab-alumnus-name">Madelynn Orlik, BS</span>
-      <span class="tmslab-alumnus-meta">Undergraduate Researcher &middot; Years unknown</span>
+      <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
     </div>
     <div class="tmslab-alumnus-now">Interests: neuropsychology and brain stimulation for chronic pain</div>
   </div>
@@ -240,7 +233,7 @@ nav_order: 4
   <div class="tmslab-alumnus-row">
     <div class="tmslab-alumnus-header">
       <span class="tmslab-alumnus-name">Tessa Spangler, BS</span>
-      <span class="tmslab-alumnus-meta">Undergraduate Researcher &middot; Years unknown</span>
+      <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
     </div>
     <div class="tmslab-alumnus-now">Tucson Medical Center; founder of &ldquo;Giving a Little Arizona Magic&rdquo;</div>
   </div>
@@ -248,7 +241,7 @@ nav_order: 4
   <div class="tmslab-alumnus-row">
     <div class="tmslab-alumnus-header">
       <span class="tmslab-alumnus-name">Anthony Martinez, BS</span>
-      <span class="tmslab-alumnus-meta">Undergraduate Researcher &middot; Years unknown</span>
+      <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
     </div>
     <div class="tmslab-alumnus-now">Pre-medical (D.O. track)</div>
   </div>
@@ -256,7 +249,7 @@ nav_order: 4
   <div class="tmslab-alumnus-row">
     <div class="tmslab-alumnus-header">
       <span class="tmslab-alumnus-name">Alison Lindstrom, BS</span>
-      <span class="tmslab-alumnus-meta">Undergraduate Researcher &middot; Years unknown</span>
+      <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
     </div>
     <div class="tmslab-alumnus-now">Current position unknown</div>
   </div>
@@ -264,7 +257,7 @@ nav_order: 4
   <div class="tmslab-alumnus-row">
     <div class="tmslab-alumnus-header">
       <span class="tmslab-alumnus-name">Priyanka Velu, BS</span>
-      <span class="tmslab-alumnus-meta">Undergraduate Researcher &middot; Years unknown</span>
+      <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
     </div>
     <div class="tmslab-alumnus-now">Pre-medical, Honors College, University of Arizona</div>
   </div>
@@ -272,7 +265,7 @@ nav_order: 4
   <div class="tmslab-alumnus-row">
     <div class="tmslab-alumnus-header">
       <span class="tmslab-alumnus-name">Jonny Baham, BS</span>
-      <span class="tmslab-alumnus-meta">Undergraduate Researcher &middot; Years unknown</span>
+      <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
     </div>
     <div class="tmslab-alumnus-now">Current position unknown</div>
   </div>

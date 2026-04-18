@@ -64,23 +64,33 @@ Our lab conducts studies on memory, cognitive aging, and brain stimulation in ad
 
 <p class="tmslab-irb-note">All studies are reviewed and approved by The University of Arizona Institutional Review Board.</p>
 
-<div class="tmslab-join-contact">
-  <h3>Ways to reach out</h3>
-  <div class="tmslab-join-contact-grid">
-    <div>
-      <div class="tmslab-contact-label">Phone</div>
-      <div class="tmslab-contact-value"><a href="tel:+15206267755">(520) 626-7755</a></div>
-    </div>
-    <div>
-      <div class="tmslab-contact-label">Email</div>
-      <div class="tmslab-contact-value"><a href="mailto:yinghuichou@arizona.edu">yinghuichou@arizona.edu</a></div>
-    </div>
-    <div>
-      <div class="tmslab-contact-label">Inquiry form</div>
-      <div class="tmslab-contact-value"><a href="#" data-tmslab-open-modal="participate" aria-haspopup="dialog">Fill out online &rarr;</a></div>
+<section class="tmslab-reach-out">
+  <h3>Ready to participate?</h3>
+  <p class="tmslab-reach-out-lead">
+    Fill out our short interest form and our team will contact you with details about eligibility and scheduling.
+  </p>
+
+  <a href="#"
+     class="tmslab-reach-out-button"
+     data-tmslab-open-modal="participate"
+     aria-haspopup="dialog">
+    Sign up to participate
+  </a>
+
+  <div class="tmslab-reach-out-alt">
+    <p class="tmslab-reach-out-alt-label">Prefer to talk to us directly?</p>
+    <div class="tmslab-reach-out-contacts">
+      <div class="tmslab-reach-out-contact">
+        <span class="tmslab-reach-out-contact-label">Call</span>
+        <a href="tel:+15206267755" class="tmslab-reach-out-contact-value">(520) 626-7755</a>
+      </div>
+      <div class="tmslab-reach-out-contact">
+        <span class="tmslab-reach-out-contact-label">Email</span>
+        <a href="mailto:yinghuichou@arizona.edu" class="tmslab-reach-out-contact-value">yinghuichou@arizona.edu</a>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 <div id="what-is-tms" class="tmslab-tms-intro">
   <p class="tmslab-themes-label">What is TMS?</p>
