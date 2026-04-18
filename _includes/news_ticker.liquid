@@ -1,14 +1,25 @@
 {%- comment -%}
   Site-wide news ticker. Pulls the 5 most recent items from
-  _news/, sorted by `date` descending. The whole strip is
-  one anchor → /news/ for clean a11y. Rotation handled by
-  /assets/js/news-ticker.js (10s per item, fade 0.4s, pauses
-  on hover, respects prefers-reduced-motion).
+  _news/, sorted by `date` descending. The whole strip is one
+  anchor → /news/ for clean a11y. "LATEST NEWS" label on the
+  left and "All news →" link on the right stay static; the
+  middle area is a horizontal marquee scrolling right-to-left
+  via CSS keyframes (see _sass/_tmslab.scss section for
+  `.tmslab-ticker-scroll-*` rules).
+
+  Content is duplicated once in the track so the scroll loops
+  seamlessly — when the first pass leaves on the left, the
+  duplicate enters the visible area, and the CSS -100%
+  translate wraps back to 0 invisibly.
 
   One-line summaries: each item's body is run through
     markdownify | strip_html | strip_newlines | strip
-  so markdown links like [text](url) render as just "text"
-  and any HTML tags / comments are removed.
+  so markdown links become plain text and HTML tags/comments
+  are removed.
+
+  Rotation logic was removed from /assets/js/news-ticker.js —
+  the animation is now pure CSS. The JS file just handles
+  reduced-motion a11y + optional dynamic duration.
 {%- endcomment -%}
 
 {%- assign recent_news = site.news | sort: "date" | reverse -%}
@@ -18,12 +29,25 @@
 <a href="{{ '/news/' | relative_url }}" class="tmslab-ticker" aria-label="Latest lab news; opens the news page">
   <div class="tmslab-ticker-inner">
     <span class="tmslab-ticker-prefix">Latest news</span>
-    <div class="tmslab-ticker-text" aria-live="polite" aria-atomic="true">
-      {%- for item in recent_news limit: 5 -%}
-        {%- capture clean -%}{{ item.content | markdownify | strip_html | strip_newlines | strip }}{%- endcapture -%}
-        <span class="tmslab-ticker-item{% if forloop.first %} is-active{% endif %}" data-index="{{ forloop.index0 }}">{{ clean | truncate: 160 }}</span>
-      {%- endfor -%}
+
+    <div class="tmslab-ticker-scroll-viewport" aria-label="Scrolling news headlines">
+      <div class="tmslab-ticker-scroll-track">
+        {%- for item in recent_news limit: 5 -%}
+          {%- capture clean -%}{{ item.content | markdownify | strip_html | strip_newlines | strip }}{%- endcapture -%}
+          <span>{{ clean | truncate: 200 }}</span>
+        {%- endfor -%}
+        {%- comment -%}
+          Duplicated set for seamless loop — as the first pass
+          scrolls off-left, the duplicate is entering from the
+          right, so there's never a visible gap or "jump back".
+        {%- endcomment -%}
+        {%- for item in recent_news limit: 5 -%}
+          {%- capture clean -%}{{ item.content | markdownify | strip_html | strip_newlines | strip }}{%- endcapture -%}
+          <span aria-hidden="true">{{ clean | truncate: 200 }}</span>
+        {%- endfor -%}
+      </div>
     </div>
+
     <span class="tmslab-ticker-link" aria-hidden="true">All news →</span>
   </div>
 </a>

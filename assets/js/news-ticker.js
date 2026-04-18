@@ -1,50 +1,48 @@
-// News ticker rotation — vanilla JS, no dependencies.
-// Cycles `.tmslab-ticker-item` elements every 10s, pauses on
-// hover, respects prefers-reduced-motion (no rotation, just
-// shows the first item statically). HTML rendered by
-// _includes/news_ticker.liquid.
+// News-ticker a11y + dynamic-duration helper.
+// The marquee animation itself is pure CSS (see
+// `.tmslab-ticker-scroll-track` keyframes in _sass/_tmslab.scss).
+// This script only:
+//   1. Measures the track and sets animation-duration so scroll
+//      speed stays ~50 px/sec regardless of content length.
+//   2. If the user prefers reduced motion, adds aria-live to the
+//      first item so screen readers still announce it statically.
 
 (function () {
-  const ticker = document.querySelector(".tmslab-ticker");
-  if (!ticker) return;
-
-  const items = ticker.querySelectorAll(".tmslab-ticker-item");
-  if (items.length <= 1) return;
+  const track = document.querySelector(".tmslab-ticker-scroll-track");
+  if (!track) return;
 
   const reduceMotionMQ = window.matchMedia("(prefers-reduced-motion: reduce)");
-  if (reduceMotionMQ.matches) return;
 
-  const ROTATE_MS = 10000;
-  let currentIndex = 0;
-  let timer = null;
-
-  function advance() {
-    items[currentIndex].classList.remove("is-active");
-    currentIndex = (currentIndex + 1) % items.length;
-    items[currentIndex].classList.add("is-active");
+  if (reduceMotionMQ.matches) {
+    const firstItem = track.querySelector("span:first-child");
+    if (firstItem) firstItem.setAttribute("aria-live", "polite");
+    return;
   }
 
-  function start() {
-    if (timer) return;
-    timer = window.setInterval(advance, ROTATE_MS);
+  // Dynamic duration — keep a consistent scroll speed regardless
+  // of how many news items there are. The track contains two
+  // duplicated sets, and the keyframe moves it by -50% (one set's
+  // worth), so the distance traveled is trackWidth / 2.
+  function setDuration() {
+    const trackWidth = track.scrollWidth;
+    if (!trackWidth) return;
+    const scrollDistance = trackWidth / 2;
+    const targetSpeedPxPerSec = 55;
+    const duration = Math.max(30, scrollDistance / targetSpeedPxPerSec);
+    track.style.animationDuration = duration + "s";
   }
 
-  function stop() {
-    if (!timer) return;
-    window.clearInterval(timer);
-    timer = null;
+  // Run after layout settles (fonts may shift widths).
+  if (document.readyState === "complete") {
+    setDuration();
+  } else {
+    window.addEventListener("load", setDuration);
   }
 
-  ticker.addEventListener("mouseenter", stop);
-  ticker.addEventListener("mouseleave", start);
-  ticker.addEventListener("focusin", stop);
-  ticker.addEventListener("focusout", start);
-
-  // Stop rotation if the user toggles reduced-motion preference mid-session.
-  reduceMotionMQ.addEventListener("change", function (e) {
-    if (e.matches) stop();
-    else start();
+  // Recompute on resize in case fonts or container width change.
+  let resizeTimer = null;
+  window.addEventListener("resize", function () {
+    if (resizeTimer) window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(setDuration, 200);
   });
-
-  start();
 })();

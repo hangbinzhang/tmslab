@@ -1458,36 +1458,67 @@ html[data-theme="dark"] .tmslab-grant-card {
   color: var(--tmslab-clay);
 }
 
-/* Stage for the rotating items — single fixed-height
-   container, items absolutely stacked inside.            */
-.tmslab-ticker-text {
-  position: relative;
+/* Scrolling marquee viewport — clips overflowing content and
+   applies soft edge fades via mask-image so text doesn't hard
+   hit the prefix / CTA on either side.                       */
+.tmslab-ticker-scroll-viewport {
   flex: 1 1 auto;
-  height: 1.4em;
   overflow: hidden;
-  min-width: 0; /* allow flex item to shrink below content size */
+  position: relative;
+  min-width: 0;
+  white-space: nowrap;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 20px,
+    black calc(100% - 20px),
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 20px,
+    black calc(100% - 20px),
+    transparent 100%
+  );
 }
 
-.tmslab-ticker-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+/* Scrolling track — the track contains two duplicated sets of
+   news items and translates from 0 to -50% (one set's worth),
+   so when the first set has fully scrolled left the duplicate
+   is precisely where the first set started → seamless loop.
+   JS tunes animation-duration dynamically to a target speed
+   of ~55 px/sec regardless of content length.                */
+.tmslab-ticker-scroll-track {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  animation: tmslab-ticker-scroll 60s linear infinite;
+  will-change: transform;
+}
+
+.tmslab-ticker:hover .tmslab-ticker-scroll-track,
+.tmslab-ticker:focus-within .tmslab-ticker-scroll-track {
+  animation-play-state: paused;
+}
+
+.tmslab-ticker-scroll-track span {
+  padding: 0 1.5rem;
   color: var(--tmslab-ink-soft);
+  font-size: 0.9rem;
   line-height: 1.4;
 }
 
-.tmslab-ticker-item.is-active {
-  opacity: 1;
+.tmslab-ticker-scroll-track span + span::before {
+  content: "·";
+  margin-right: 1.5rem;
+  margin-left: -1.5rem;
+  color: var(--tmslab-sand);
 }
 
-.tmslab-ticker:hover .tmslab-ticker-item.is-active {
-  color: var(--tmslab-ink);
+@keyframes tmslab-ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .tmslab-ticker-link {
@@ -1514,9 +1545,19 @@ html[data-theme="dark"] .tmslab-grant-card {
   }
 }
 
+/* Reduced-motion: stop the animation and show only the first
+   (most recent) news item statically. JS also promotes that
+   first <span> to aria-live="polite" so screen readers still
+   announce it.                                               */
 @media (prefers-reduced-motion: reduce) {
-  .tmslab-ticker-item {
-    transition: none;
+  .tmslab-ticker-scroll-track {
+    animation: none;
+    transform: none;
+  }
+
+  .tmslab-ticker-scroll-track span:not(:first-child),
+  .tmslab-ticker-scroll-track span[aria-hidden="true"] {
+    display: none;
   }
 }
 
