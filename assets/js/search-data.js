@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-research",
           title: "Research",
-          description: "Research overview, funded projects, and trainee recognition at the Brain Imaging and TMS Laboratory.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/tmslab/research/";
@@ -46,7 +46,7 @@ ninja.data = [{
           },
         },{id: "nav-join-us",
           title: "Join Us",
-          description: "Participate in one of our research studies or join the lab as a trainee.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/tmslab/join/";
