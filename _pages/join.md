@@ -6,60 +6,61 @@ nav: true
 nav_order: 7
 ---
 
-Our lab conducts studies on memory, cognitive aging, and brain stimulation in adults aged 50&ndash;85. Review the active studies below, then reach out by phone, email, or our online inquiry form. [What is TMS? &rarr;](#what-is-tms)
+Our lab conducts studies on memory, cognitive aging, and brain stimulation. Review the active studies below, then reach out by phone, email, or our online inquiry form. [What is TMS? &rarr;](#what-is-tms)
 
 <p class="tmslab-themes-label">Active Studies</p>
 
 <div class="tmslab-study-card">
-  <h3>Interleaved TMS Study</h3>
+  <h3>Sleep, Brain Waste Clearance, and Memory</h3>
   <div class="tmslab-study-meta">
-    <span>Ages 55&ndash;85</span>
-    <span>&middot;</span>
-    <span>Two blocks, 3&ndash;4 visits each (longest visit 3.5 hours)</span>
-    <span>&middot;</span>
-    <span>Up to $400</span>
+    <span class="tmslab-grant-type-pill">Ages 18&ndash;85</span>
+    <span class="tmslab-grant-type-pill">Up to $590 compensation</span>
+    <span class="tmslab-grant-agency-pill">Glymphatic TMS Study</span>
   </div>
-  <p>A noninvasive TMS protocol to help attenuate cognitive decline in adults experiencing cognitive change, and to establish a dose-response relationship for TMS. Involves standard MRI, TMS, and a brief memory task.</p>
-  <p class="tmslab-study-eligibility"><strong>Eligibility:</strong> Healthy adults and individuals with mild cognitive impairment aged 55&ndash;85, right-handed. You cannot participate if you have a history of neurological disease, fainting, or seizures; any electrical or cochlear implant; implanted metal; recent drug withdrawal; are pregnant; or are currently taking psychoactive medications.</p>
+
+  <p>
+    We are developing methods for preventing age-related memory decline using Transcranial Magnetic Stimulation (TMS), a non-invasive technique already proven safe and effective for treating depression and migraines. This study examines how TMS may support the brain's glymphatic system &mdash; a waste-clearance pathway active during sleep that may play a role in protecting memory and brain health.
+  </p>
+
+  <p class="tmslab-study-eligibility">
+    <strong>You may be eligible if you are:</strong> 18&ndash;85 years old, experiencing memory complaints, right-handed, and fluent in English (it does not have to be your first language).
+    <br><br>
+    <strong>What's involved:</strong> Three blocks of non-invasive brain stimulation (two blocks of 5 sessions), MRI scans, cognitive testing, blood draws, and a cheek swab. All visits are in person at the University of Arizona (1230 N Cherry Ave, Tucson).
+  </p>
+
+  <div class="tmslab-study-flyer-wrap">
+    <figure class="tmslab-study-flyer-thumb"
+            tabindex="0"
+            data-flyer-src="{{ '/assets/img/flyers/glymphatic_flyer.jpg' | relative_url }}"
+            data-flyer-caption="Glymphatic TMS Study — recruitment flyer">
+      <img src="{{ '/assets/img/flyers/glymphatic_flyer.jpg' | relative_url }}"
+           alt="Glymphatic TMS Study recruitment flyer preview"
+           loading="lazy">
+      <figcaption class="tmslab-study-flyer-hint">Click to enlarge</figcaption>
+    </figure>
+
+    <a href="{{ '/assets/img/flyers/glymphatic_flyer.pdf' | relative_url }}"
+       download
+       class="tmslab-study-flyer-download">
+      Download printable flyer (PDF) &darr;
+    </a>
+  </div>
 </div>
 
 <div class="tmslab-study-card">
-  <h3>Hippocampal Plasticity Study</h3>
+  <h3>Nutrition and Brain Plasticity</h3>
   <div class="tmslab-study-meta">
-    <span>Ages 50&ndash;85</span>
-    <span>&middot;</span>
-    <span>Screening + three blocks of 11 visits over 6 months, plus a follow-up</span>
-    <span>&middot;</span>
-    <span>Up to $280 per stage</span>
+    <span class="tmslab-grant-type-pill">Recruiting</span>
+    <span class="tmslab-grant-agency-pill">Ketone TMS Study</span>
   </div>
-  <p>MRI-guided TMS to explore ways to prevent memory decline. Effectiveness is assessed with behavioral tests and MRI scans across a six-month period. Involves MRI, TMS, cognitive assessments, a genotype test, and body-worn devices.</p>
-  <p class="tmslab-study-eligibility"><strong>Eligibility:</strong> Healthy adults or adults with mild cognitive impairment aged 50&ndash;85, right-handed. You cannot participate if you have a history of neurological or psychiatric disease, fainting, Alzheimer's disease, or seizures; any electrical or cochlear implant; implanted metal; recent drug withdrawal; or were enrolled in another interventional study within the past 6 months.</p>
-</div>
 
-<div class="tmslab-study-card">
-  <h3>EEG Study</h3>
-  <div class="tmslab-study-meta">
-    <span>Ages 50&ndash;85</span>
-    <span>&middot;</span>
-    <span>Screening + two blocks of one session each</span>
-    <span>&middot;</span>
-    <span>Up to $280 per stage</span>
-  </div>
-  <p>Noninvasive repetitive TMS (rTMS) protocols as a novel therapeutic tool to attenuate cognitive decline in adults at high risk for Alzheimer's disease. A step toward a clinically feasible noninvasive brain stimulation therapy for MCI and AD. Involves MRI, TMS, cognitive assessments, a genotype test, body-worn devices, and EEG.</p>
-  <p class="tmslab-study-eligibility"><strong>Eligibility:</strong> Healthy adults or adults with mild cognitive impairment aged 50&ndash;85, right-handed. Same exclusions as the Hippocampal Plasticity Study above.</p>
-</div>
+  <p>
+    Emerging evidence suggests that dietary ketones may influence neural plasticity. This study combines ketone supplementation with Transcranial Magnetic Stimulation (TMS) to investigate the downstream neural interactions between metabolic and stimulation-based approaches to brain health.
+  </p>
 
-<div class="tmslab-study-card">
-  <h3>Gut Microbiome Study</h3>
-  <div class="tmslab-study-meta">
-    <span>Ages 50&ndash;85</span>
-    <span>&middot;</span>
-    <span>One instruction session + at-home sample drop-off</span>
-    <span>&middot;</span>
-    <span>$20</span>
-  </div>
-  <p>An emerging area of research into how the trillions of bacterial cells inhabiting the gut and mouth influence our health as we age. We analyze stool and saliva samples to evaluate how the microbiome shapes the aging brain.</p>
-  <p class="tmslab-study-eligibility"><strong>Eligibility:</strong> Healthy adults or adults with mild cognitive impairment aged 50&ndash;85, right-handed. Same exclusions as the Hippocampal Plasticity Study above.</p>
+  <p class="tmslab-study-eligibility">
+    Full eligibility criteria and study details will be shared during initial screening. Use the "Sign up to participate" button below to express interest, and our team will follow up with more information.
+  </p>
 </div>
 
 <p class="tmslab-irb-note">All studies are reviewed and approved by The University of Arizona Institutional Review Board.</p>
@@ -122,3 +123,5 @@ We welcome applications from prospective graduate students, postdoctoral researc
 **Postdoctoral researchers** &mdash; email Dr. Chou directly at [yinghuichou@arizona.edu](mailto:yinghuichou@arizona.edu) with your CV and research interests.
 
 **Undergraduates** &mdash; reach out with your CV and a brief statement of interest.
+
+<script src="{{ '/assets/js/flyer-lightbox.js' | relative_url }}" defer></script>

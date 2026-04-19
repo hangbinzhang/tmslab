@@ -305,9 +305,14 @@ html[data-theme="dark"] .tmslab-objective-card:hover {
    ==================================================== */
 
 /* Hide the default page header on the homepage — the lab name
-   and tagline live in the hero overlay below. */
-.layout-about .post > .post-header {
-  display: none;
+   and tagline live in the hero overlay below. The first selector
+   is the canonical one; the extra siblings + !important are
+   defensive against any upstream al-folio rule that might override
+   display on .post-header with a higher specificity. */
+.layout-about .post > .post-header,
+.layout-about .post-header,
+.layout-about > .container > h1:first-of-type {
+  display: none !important;
 }
 
 .tmslab-hero {
@@ -423,6 +428,29 @@ html[data-theme="dark"] .tmslab-objective-card:hover {
 
 .tmslab-hero-overlay .tmslab-hero-tagline {
   margin-top: 0.25rem;
+}
+
+/* Narrow-viewport overrides. The clamp() sizes above handle most
+   viewports, but on phones (~380px wide) the baseline floor of
+   2rem for the h1 wraps awkwardly next to the kicker/tagline;
+   a smaller, tighter stack reads cleaner. */
+@media (max-width: 640px) {
+  .tmslab-hero-overlay h1,
+  .tmslab-hero-overlay h2 {
+    font-size: 1.75rem;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+  }
+
+  .tmslab-hero-overlay p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .tmslab-hero-overlay .tmslab-hero-kicker {
+    font-size: 0.7rem;
+    margin-bottom: 0.6rem;
+  }
 }
 
 /* ====================================================
@@ -1372,11 +1400,11 @@ html[data-theme="dark"] .tmslab-grant-card {
   color: var(--tmslab-clay, #b8654a);
 }
 
-/* --- Alumni: compact two-column directory list ---
-   Pure typography (no cards, no photos, no backgrounds). Each
-   row: name on the left, role + years right-aligned on the same
-   baseline; italic "now at" line below. Reads as a reference
-   directory rather than duplicated current-member cards.       */
+/* --- Alumni: two-column directory list with portraits ---
+   Small square photo on the left, name + role stacked on the
+   right with an optional italic "now at" line. Each row is its
+   own inner grid (photo | info) so the info column can wrap
+   cleanly regardless of how long the role text runs. */
 
 .tmslab-alumni-list {
   display: grid;
@@ -1393,38 +1421,56 @@ html[data-theme="dark"] .tmslab-grant-card {
 }
 
 .tmslab-alumnus-row {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 1rem;
   padding: 0.75rem 0;
+  align-items: start;
+}
+
+.tmslab-alumnus-photo {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(44, 36, 22, 0.08);
+}
+
+.tmslab-alumnus-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
 }
 
 .tmslab-alumnus-header {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-  margin-bottom: 0.25rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin-bottom: 0.15rem;
 }
 
 .tmslab-alumnus-name {
   font-weight: 600;
   color: var(--tmslab-ink, #2c2416);
-  font-size: 1rem;
+  font-size: 0.98rem;
+  line-height: 1.3;
 }
 
 .tmslab-alumnus-meta {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--tmslab-ink-soft, #5a4a36);
   font-weight: 400;
-  letter-spacing: 0.02em;
-  text-align: right;
-  flex-shrink: 0;
+  line-height: 1.35;
 }
 
 .tmslab-alumnus-now {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: var(--tmslab-ink-soft, #5a4a36);
   font-style: italic;
   line-height: 1.4;
+  margin: 0.2rem 0 0;
+  max-width: none;
 }
 
 /* Legacy `.tmslab-cv-btn` rules removed — the CV link style
@@ -1597,9 +1643,11 @@ html[data-theme="dark"] .tmslab-grant-card {
    ==================================================== */
 
 /* Hide layout's default post-header on the contact page so we
-   render our own centered heading inside the page wrapper.   */
+   render our own centered heading inside the page wrapper.
+   !important as a defensive belt-and-suspenders — modern browsers
+   support :has() fine, but this avoids any late cascade override.  */
 .post:has(.tmslab-contact-page) > .post-header {
-  display: none;
+  display: none !important;
 }
 
 .tmslab-contact-page {
@@ -1822,6 +1870,52 @@ html[data-theme="dark"] .tmslab-form-card {
 }
 
 /* --- Map section (two side-by-side single-pin embeds) --- */
+
+/* Prospective-students-and-postdocs block — sits between the
+   contact form and the map section. Quiet layout, centered
+   column, separator rule on top so it reads as a distinct but
+   related section to the form above. */
+.tmslab-contact-trainees {
+  max-width: 760px;
+  margin: 3rem auto 0;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--tmslab-sand-light, #efe6d6);
+}
+
+.tmslab-contact-trainees h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--tmslab-ink, #2c2416);
+  margin: 0 0 1rem;
+  text-align: left;
+  padding: 0;
+  border: none;
+  max-width: none;
+}
+
+.tmslab-contact-trainees h2::after {
+  display: none;
+}
+
+.tmslab-contact-trainees p {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--tmslab-ink, #2c2416);
+  margin: 0 0 1rem;
+  max-width: none;
+}
+
+.tmslab-contact-trainees a {
+  color: var(--tmslab-clay, #b8654a);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+.tmslab-contact-trainees a:hover,
+.tmslab-contact-trainees a:focus {
+  border-bottom-color: var(--tmslab-clay, #b8654a);
+}
 
 /* The "Find us" heading now uses `.tmslab-themes-label`
    (small-caps terracotta) — same treatment as every other
@@ -2598,6 +2692,193 @@ body.modal-open {
 html[data-theme="dark"] .tmslab-study-card {
   background: var(--global-card-bg-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+/* Study flyer preview — compact thumbnail that opens the
+   full image in a lightbox, paired with a PDF download link.
+   The old full-bleed flyer was replaced because a 560px image
+   dominated the card and made the card feel like a flyer
+   wrapper rather than a study summary. */
+.tmslab-study-flyer-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0 0;
+  flex-wrap: wrap;
+}
+
+.tmslab-study-flyer-thumb {
+  position: relative;
+  width: 180px;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(44, 36, 22, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
+}
+
+.tmslab-study-flyer-thumb:hover,
+.tmslab-study-flyer-thumb:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(44, 36, 22, 0.2);
+  outline: none;
+}
+
+.tmslab-study-flyer-thumb:focus-visible {
+  outline: 2px solid var(--tmslab-clay, #b8654a);
+  outline-offset: 3px;
+}
+
+.tmslab-study-flyer-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.tmslab-study-flyer-hint {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(20, 14, 10, 0.85),
+    rgba(20, 14, 10, 0)
+  );
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1.5rem 0.5rem 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.tmslab-study-flyer-thumb:hover .tmslab-study-flyer-hint,
+.tmslab-study-flyer-thumb:focus .tmslab-study-flyer-hint {
+  opacity: 1;
+}
+
+.tmslab-study-flyer-download {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--tmslab-clay, #b8654a);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.18s ease;
+  align-self: center;
+}
+
+.tmslab-study-flyer-download:hover,
+.tmslab-study-flyer-download:focus {
+  border-bottom-color: var(--tmslab-clay, #b8654a);
+  text-decoration: none;
+}
+
+@media (max-width: 560px) {
+  .tmslab-study-flyer-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .tmslab-study-flyer-thumb {
+    width: 100%;
+    max-width: 240px;
+  }
+}
+
+/* Flyer lightbox — standalone from the gallery lightbox because
+   the gallery lightbox is tightly coupled to the gallery's
+   prev/next nav between siblings; flyer previews are one-off.
+   JS lives in /assets/js/flyer-lightbox.js (lazy-loaded from
+   _pages/join.md). */
+.tmslab-flyer-lightbox {
+  display: none;
+}
+
+.tmslab-flyer-lightbox[aria-hidden="false"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.tmslab-flyer-lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 14, 10, 0.92);
+  cursor: pointer;
+  z-index: 0;
+}
+
+.tmslab-flyer-lightbox-figure {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tmslab-flyer-lightbox-img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  display: block;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55);
+  background: var(--tmslab-cream, #faf7f2);
+  border-radius: 4px;
+}
+
+.tmslab-flyer-lightbox-caption {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--tmslab-cream, #faf7f2);
+  text-align: center;
+  letter-spacing: 0.01em;
+  max-width: 90vw;
+}
+
+.tmslab-flyer-lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: 1px solid rgba(250, 247, 242, 0.4);
+  border-radius: 6px;
+  color: var(--tmslab-cream, #faf7f2);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.tmslab-flyer-lightbox-close:hover,
+.tmslab-flyer-lightbox-close:focus {
+  background: rgba(250, 247, 242, 0.12);
+  border-color: var(--tmslab-cream, #faf7f2);
+  outline: none;
+}
+
+@media (max-width: 640px) {
+  .tmslab-flyer-lightbox-close {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
 }
 
 /* IRB footer note — quiet italic centered one-liner. */

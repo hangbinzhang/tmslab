@@ -42,7 +42,7 @@ latest_posts:
     <div class="tmslab-hero-overlay-inner">
       <p class="tmslab-hero-kicker">University of Arizona</p>
       <h1>Brain Imaging and TMS Laboratory</h1>
-      <p class="tmslab-hero-tagline">Advancing the understanding of memory enhancement, <br> brain-behavior relationships,and biomarkers in neurodegenerative disorders</p>
+      <p class="tmslab-hero-tagline">Advancing the understanding of memory enhancement, <br> brain-behavior relationships, and biomarkers in neurodegenerative disorders</p>
     </div>
   </div>
 </div>
@@ -102,7 +102,7 @@ latest_posts:
     </div>
     <div class="tmslab-research-card-body">
       <h4 class="tmslab-research-card-title">Plasticity &amp; brain health</h4>
-      <p class="tmslab-research-card-desc">Using TMS probes of cortical excitability and plasticity, we are identifying early biomarkers of cognitive decline and brain health across aging.</p>
+      <p class="tmslab-research-card-desc">TMS probes of cortical excitability and plasticity reveal early biomarkers of cognitive decline and brain health across the aging spectrum.</p>
       <span class="tmslab-research-card-arrow" aria-hidden="true">→</span>
     </div>
   </a>
@@ -113,7 +113,7 @@ latest_posts:
     </div>
     <div class="tmslab-research-card-body">
       <h4 class="tmslab-research-card-title">Precision neuromodulation</h4>
-      <p class="tmslab-research-card-desc">Combining neuronavigation, white-matter-tract guidance, electric-field modeling, and accelerated protocols, we are advancing TMS toward precision and eventually closed-loop stimulation.</p>
+      <p class="tmslab-research-card-desc">We combine neuronavigation, white-matter-tract guidance, electric-field modeling, and accelerated protocols to advance TMS toward precision and eventually closed-loop stimulation.</p>
       <span class="tmslab-research-card-arrow" aria-hidden="true">→</span>
     </div>
   </a>
@@ -142,13 +142,14 @@ latest_posts:
     <span class="tmslab-cta-arrow">Get in touch &rarr;</span>
   </a>
 
-  <!-- TODO: Replace href="#" with the real donation/giving page URL
-       (e.g., a University of Arizona Foundation gift link for the lab)
-       once it's set up. -->
-  <a href="#" class="tmslab-cta-card">
-    <h4>Donate today</h4>
-    <p>Support our research into memory, aging, and image-guided TMS therapies. Every gift helps.</p>
-    <span class="tmslab-cta-arrow">Give now &rarr;</span>
-  </a>
+  {% comment %}
+    Donate card — re-enable when we have the UArizona Foundation giving link.
+    Original card:
+    <a class="tmslab-cta-card" href="#">
+      <h4>Donate today</h4>
+      <p>Support our research into memory, aging, and image-guided TMS therapies. Every gift helps.</p>
+      <span class="tmslab-cta-arrow">Give now &rarr;</span>
+    </a>
+  {% endcomment %}
 
 </div>

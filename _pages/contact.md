@@ -70,6 +70,16 @@ nav_order: 8
 
   </div>
 
+  <section class="tmslab-contact-trainees">
+    <h2>Prospective students and postdocs</h2>
+    <p>
+      Interested in joining the lab? Email Dr. Chou at <a href="mailto:yinghuichou@arizona.edu">yinghuichou@arizona.edu</a> with your CV, a brief statement of research interests, and how your background aligns with our work. We welcome inquiries from graduate students, postdoctoral fellows, and undergraduates.
+    </p>
+    <p>
+      For detailed information about our research areas and opportunities, visit the <a href="{{ '/join/' | relative_url }}">Join Us page</a>.
+    </p>
+  </section>
+
   <section class="tmslab-contact-map">
 
     <p class="tmslab-themes-label">Find us</p>

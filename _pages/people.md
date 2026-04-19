@@ -144,176 +144,171 @@ nav_order: 4
     Adjust if a different ordering makes more sense.
 
   Photos intentionally not rendered for alumni (portraits are a
-  current-member treatment). The .jpg files remain on disk under
-  /assets/img/people/ because a handful are still referenced in the
-  "Awards & Honors" section below.
+  current-member treatment).
 -->
 <div class="tmslab-alumni-list">
 
   <div class="tmslab-alumnus-row">
-    <div class="tmslab-alumnus-header">
-      <span class="tmslab-alumnus-name">Yu-Chin (Allison) Chen, MS, MD, PhD</span>
-      <span class="tmslab-alumnus-meta">Postdoctoral Associate</span>
+    <img src="{{ '/assets/img/people/chen_yuchin.jpg' | relative_url }}" alt="Yu-Chin (Allison) Chen" class="tmslab-alumnus-photo" loading="lazy">
+    <div class="tmslab-alumnus-info">
+      <div class="tmslab-alumnus-header">
+        <span class="tmslab-alumnus-name">Yu-Chin (Allison) Chen, MS, MD, PhD</span>
+        <span class="tmslab-alumnus-meta">Postdoctoral Associate</span>
+      </div>
+      <div class="tmslab-alumnus-now">Research Manager, Seattle</div>
     </div>
-    <div class="tmslab-alumnus-now">Physician, Taiwan</div>
   </div>
 
   <div class="tmslab-alumnus-row">
-    <div class="tmslab-alumnus-header">
-      <span class="tmslab-alumnus-name">Christopher Trapani, BS</span>
-      <span class="tmslab-alumnus-meta">Medical Student Researcher</span>
+    <img src="{{ '/assets/img/people/trapani.jpg' | relative_url }}" alt="Christopher Trapani" class="tmslab-alumnus-photo" loading="lazy">
+    <div class="tmslab-alumnus-info">
+      <div class="tmslab-alumnus-header">
+        <span class="tmslab-alumnus-name">Christopher Trapani, BS, MD</span>
+        <span class="tmslab-alumnus-meta">Medical Student Researcher</span>
+      </div>
+      <div class="tmslab-alumnus-now">Physician</div>
     </div>
-    <div class="tmslab-alumnus-now">Medical student, University of Arizona</div>
   </div>
 
   <div class="tmslab-alumnus-row">
-    <div class="tmslab-alumnus-header">
-      <span class="tmslab-alumnus-name">Lisbeth Haaheim, BS</span>
-      <span class="tmslab-alumnus-meta">Clinical Research Coordinator</span>
+    <img src="{{ '/assets/img/people/haaheim.jpg' | relative_url }}" alt="Lisbeth Haaheim" class="tmslab-alumnus-photo" loading="lazy">
+    <div class="tmslab-alumnus-info">
+      <div class="tmslab-alumnus-header">
+        <span class="tmslab-alumnus-name">Lisbeth Haaheim, BS</span>
+        <span class="tmslab-alumnus-meta">Clinical Research Coordinator</span>
+      </div>
+      <div class="tmslab-alumnus-now">Clinical research</div>
     </div>
-    <div class="tmslab-alumnus-now">Clinical research</div>
   </div>
 
   <div class="tmslab-alumnus-row">
-    <div class="tmslab-alumnus-header">
-      <span class="tmslab-alumnus-name">Hannah Siu, BS</span>
-      <span class="tmslab-alumnus-meta">Research Data Support Specialist</span>
+    <img src="{{ '/assets/img/people/siu.jpg' | relative_url }}" alt="Hanna Siu" class="tmslab-alumnus-photo" loading="lazy">
+    <div class="tmslab-alumnus-info">
+      <div class="tmslab-alumnus-header">
+        <span class="tmslab-alumnus-name">Hanna Siu, M.S.</span>
+        <span class="tmslab-alumnus-meta">Research Data Support Specialist</span>
+      </div>
+      <div class="tmslab-alumnus-now">M.S. in Medical Nutrition, Arizona State University</div>
     </div>
-    <div class="tmslab-alumnus-now">MS candidate, Medical Nutrition, Arizona State University</div>
   </div>
 
   <div class="tmslab-alumnus-row">
-    <div class="tmslab-alumnus-header">
-      <span class="tmslab-alumnus-name">Catherine Jezerc, BS</span>
-      <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
+    <img src="{{ '/assets/img/people/jezerc.jpg' | relative_url }}" alt="Catherine Jezerc" class="tmslab-alumnus-photo" loading="lazy">
+    <div class="tmslab-alumnus-info">
+      <div class="tmslab-alumnus-header">
+        <span class="tmslab-alumnus-name">Catherine Jezerc, BS</span>
+        <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
+      </div>
     </div>
-    <div class="tmslab-alumnus-now">Recent graduate</div>
   </div>
 
   <div class="tmslab-alumnus-row">
-    <div class="tmslab-alumnus-header">
-      <span class="tmslab-alumnus-name">Koeun Lim, PhD</span>
-      <span class="tmslab-alumnus-meta">Data Scientist</span>
+    <img src="{{ '/assets/img/people/lim.jpg' | relative_url }}" alt="Koeun Lim" class="tmslab-alumnus-photo" loading="lazy">
+    <div class="tmslab-alumnus-info">
+      <div class="tmslab-alumnus-header">
+        <span class="tmslab-alumnus-name">Koeun Lim, PhD</span>
+        <span class="tmslab-alumnus-meta">Data Scientist</span>
+      </div>
+      <div class="tmslab-alumnus-now">Industry data scientist</div>
     </div>
-    <div class="tmslab-alumnus-now">Industry data scientist</div>
   </div>
 
   <div class="tmslab-alumnus-row">
-    <div class="tmslab-alumnus-header">
-      <span class="tmslab-alumnus-name">Viet Ton That, BS</span>
-      <span class="tmslab-alumnus-meta">Research Assistant</span>
+    <img src="{{ '/assets/img/people/tonthat.jpg' | relative_url }}" alt="Viet Ton That" class="tmslab-alumnus-photo" loading="lazy">
+    <div class="tmslab-alumnus-info">
+      <div class="tmslab-alumnus-header">
+        <span class="tmslab-alumnus-name">Viet Ton That, BS</span>
+        <span class="tmslab-alumnus-meta">Research Assistant</span>
+      </div>
     </div>
-    <div class="tmslab-alumnus-now">Post-graduate (details unknown)</div>
   </div>
 
   <div class="tmslab-alumnus-row">
-    <div class="tmslab-alumnus-header">
-      <span class="tmslab-alumnus-name">Bernadette De Vault, MS</span>
-      <span class="tmslab-alumnus-meta">Research Coordinator</span>
+    <img src="{{ '/assets/img/people/devault.jpg' | relative_url }}" alt="Bernadette De Vault" class="tmslab-alumnus-photo" loading="lazy">
+    <div class="tmslab-alumnus-info">
+      <div class="tmslab-alumnus-header">
+        <span class="tmslab-alumnus-name">Bernadette De Vault, MS</span>
+        <span class="tmslab-alumnus-meta">Master's Student</span>
+      </div>
+      <div class="tmslab-alumnus-now">Clinical research / public health</div>
     </div>
-    <div class="tmslab-alumnus-now">Clinical research / public health</div>
   </div>
 
   <div class="tmslab-alumnus-row">
-    <div class="tmslab-alumnus-header">
-      <span class="tmslab-alumnus-name">Rudolph John Rodriguez, BS</span>
-      <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
+    <img src="{{ '/assets/img/people/rodriguez.jpg' | relative_url }}" alt="Rudolph John Rodriguez" class="tmslab-alumnus-photo" loading="lazy">
+    <div class="tmslab-alumnus-info">
+      <div class="tmslab-alumnus-header">
+        <span class="tmslab-alumnus-name">Rudolph John Rodriguez, BS</span>
+        <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
+      </div>
+      <div class="tmslab-alumnus-now">PhD student in Physics</div>
     </div>
-    <div class="tmslab-alumnus-now">PhD student in Physics</div>
   </div>
 
   <div class="tmslab-alumnus-row">
-    <div class="tmslab-alumnus-header">
-      <span class="tmslab-alumnus-name">Madelynn Orlik, BS</span>
-      <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
+    <img src="{{ '/assets/img/people/orlik.jpg' | relative_url }}" alt="Madelynn Orlik" class="tmslab-alumnus-photo" loading="lazy">
+    <div class="tmslab-alumnus-info">
+      <div class="tmslab-alumnus-header">
+        <span class="tmslab-alumnus-name">Madelynn Orlik, BS</span>
+        <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
+      </div>
+      <div class="tmslab-alumnus-now">Interests: neuropsychology and brain stimulation for chronic pain</div>
     </div>
-    <div class="tmslab-alumnus-now">Interests: neuropsychology and brain stimulation for chronic pain</div>
   </div>
 
   <div class="tmslab-alumnus-row">
-    <div class="tmslab-alumnus-header">
-      <span class="tmslab-alumnus-name">Tessa Spangler, BS</span>
-      <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
+    <img src="{{ '/assets/img/people/spangler.jpg' | relative_url }}" alt="Tessa Spangler" class="tmslab-alumnus-photo" loading="lazy">
+    <div class="tmslab-alumnus-info">
+      <div class="tmslab-alumnus-header">
+        <span class="tmslab-alumnus-name">Tessa Spangler, BS</span>
+        <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
+      </div>
+      <div class="tmslab-alumnus-now">Tucson Medical Center; founder of &ldquo;Giving a Little Arizona Magic&rdquo;</div>
     </div>
-    <div class="tmslab-alumnus-now">Tucson Medical Center; founder of &ldquo;Giving a Little Arizona Magic&rdquo;</div>
   </div>
 
   <div class="tmslab-alumnus-row">
-    <div class="tmslab-alumnus-header">
-      <span class="tmslab-alumnus-name">Anthony Martinez, BS</span>
-      <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
+    <img src="{{ '/assets/img/people/martinez.jpg' | relative_url }}" alt="Anthony Martinez" class="tmslab-alumnus-photo" loading="lazy">
+    <div class="tmslab-alumnus-info">
+      <div class="tmslab-alumnus-header">
+        <span class="tmslab-alumnus-name">Anthony Martinez, BS</span>
+        <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
+      </div>
+      <div class="tmslab-alumnus-now">Pre-medical (D.O. track)</div>
     </div>
-    <div class="tmslab-alumnus-now">Pre-medical (D.O. track)</div>
   </div>
 
   <div class="tmslab-alumnus-row">
-    <div class="tmslab-alumnus-header">
-      <span class="tmslab-alumnus-name">Alison Lindstrom, BS</span>
-      <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
+    <img src="{{ '/assets/img/people/lindstrom.jpg' | relative_url }}" alt="Alison Lindstrom" class="tmslab-alumnus-photo" loading="lazy">
+    <div class="tmslab-alumnus-info">
+      <div class="tmslab-alumnus-header">
+        <span class="tmslab-alumnus-name">Alison Lindstrom, BS</span>
+        <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
+      </div>
     </div>
-    <div class="tmslab-alumnus-now">Current position unknown</div>
   </div>
 
   <div class="tmslab-alumnus-row">
-    <div class="tmslab-alumnus-header">
-      <span class="tmslab-alumnus-name">Priyanka Velu, BS</span>
-      <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
+    <img src="{{ '/assets/img/people/velu.jpg' | relative_url }}" alt="Priyanka Velu" class="tmslab-alumnus-photo" loading="lazy">
+    <div class="tmslab-alumnus-info">
+      <div class="tmslab-alumnus-header">
+        <span class="tmslab-alumnus-name">Priyanka Velu, BS</span>
+        <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
+      </div>
+      <div class="tmslab-alumnus-now">Pre-medical, Honors College, University of Arizona</div>
     </div>
-    <div class="tmslab-alumnus-now">Pre-medical, Honors College, University of Arizona</div>
   </div>
 
   <div class="tmslab-alumnus-row">
-    <div class="tmslab-alumnus-header">
-      <span class="tmslab-alumnus-name">Jonny Baham, BS</span>
-      <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
+    <img src="{{ '/assets/img/people/baham.jpg' | relative_url }}" alt="Jonny Baham" class="tmslab-alumnus-photo" loading="lazy">
+    <div class="tmslab-alumnus-info">
+      <div class="tmslab-alumnus-header">
+        <span class="tmslab-alumnus-name">Jonny Baham, BS</span>
+        <span class="tmslab-alumnus-meta">Undergraduate Researcher</span>
+      </div>
+      <div class="tmslab-alumnus-now">Research Coordinator at Duke University</div>
     </div>
-    <div class="tmslab-alumnus-now">Current position unknown</div>
   </div>
-
-</div>
-
-<h2 id="awards-honors" class="section-heading">Awards &amp; Honors</h2>
-
-<p class="tmslab-people-section-lead">External awards and fellowships earned by lab trainees.</p>
-
-<div class="tmslab-trainees-grid">
-
-  <article class="tmslab-trainee-card">
-    <img src="{{ '/assets/img/people/sundman.jpg' | relative_url }}" alt="Mark Sundman">
-    <h3>Mark Sundman, PhD</h3>
-    <ul>
-      <li>NIH/NIA EUREKA Prize <em>(Exceptional, Unconventional Research Enabling Knowledge Acceleration)</em></li>
-      <li>NDSEG Fellowship <em>(National Defense Science and Engineering Graduate, DoD)</em></li>
-    </ul>
-  </article>
-
-  <article class="tmslab-trainee-card">
-    <img src="{{ '/assets/img/people/chen_yuchin.jpg' | relative_url }}" alt="Yu-Chin (Allison) Chen">
-    <h3>Yu-Chin (Allison) Chen, MD, PhD</h3>
-    <ul>
-      <li>Taiwan Ministry of Education Scholarship</li>
-    </ul>
-  </article>
-
-  <article class="tmslab-trainee-card">
-    <img src="{{ '/assets/img/people/rodriguez.jpg' | relative_url }}" alt="Rudolph Rodriguez">
-    <h3>Rudolph Rodriguez</h3>
-    <ul>
-      <li>Undergraduate Biology Research Program Grant</li>
-    </ul>
-  </article>
-
-  <article class="tmslab-trainee-card tmslab-trainee-card--team">
-    <div class="tmslab-trainee-photos">
-      <img src="{{ '/assets/img/people/jezerc.jpg' | relative_url }}" alt="Catherine Jezerc">
-      <img src="{{ '/assets/img/people/lai.jpg' | relative_url }}" alt="Kaitlyn Lai">
-      <img src="{{ '/assets/img/people/arnold.jpg' | relative_url }}" alt="Gavin Arnold">
-    </div>
-    <h3>Catherine Jezerc, Kaitlyn Lai &amp; Gavin Arnold</h3>
-    <ul>
-      <li>Exploratory Mini Grant — Team Winners</li>
-    </ul>
-  </article>
 
 </div>
 
