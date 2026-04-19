@@ -10,57 +10,59 @@ Our lab conducts studies on memory, cognitive aging, and brain stimulation. Revi
 
 <p class="tmslab-themes-label">Active Studies</p>
 
-<div class="tmslab-study-card">
-  <h3>Sleep, Brain Waste Clearance, and Memory</h3>
-  <div class="tmslab-study-meta">
-    <span class="tmslab-grant-type-pill">Ages 18&ndash;85</span>
-    <span class="tmslab-grant-type-pill">Up to $590 compensation</span>
-    <span class="tmslab-grant-agency-pill">Glymphatic TMS Study</span>
-  </div>
+<div class="tmslab-study-card" markdown="0">
+  <div class="tmslab-study-card-inner">
+    <div class="tmslab-study-card-content">
+      <h3>Sleep, Brain Waste Clearance, and Memory</h3>
+      <div class="tmslab-study-meta">
+        <span class="tmslab-grant-type-pill">Ages 18&ndash;85</span>
+        <span class="tmslab-grant-type-pill">Up to $590 compensation</span>
+        <span class="tmslab-grant-agency-pill">Glymphatic TMS Study</span>
+      </div>
 
-  <p>
-    We are developing methods for preventing age-related memory decline using Transcranial Magnetic Stimulation (TMS), a non-invasive technique already proven safe and effective for treating depression and migraines. This study examines how TMS may support the brain's glymphatic system &mdash; a waste-clearance pathway active during sleep that may play a role in protecting memory and brain health.
-  </p>
+      <p>We are developing methods for preventing age-related memory decline using Transcranial Magnetic Stimulation (TMS), a non-invasive technique already proven safe and effective for treating depression and migraines. This study examines how TMS may support the brain's glymphatic system &mdash; a waste-clearance pathway active during sleep that may play a role in protecting memory and brain health.</p>
 
-  <p class="tmslab-study-eligibility">
-    <strong>You may be eligible if you are:</strong> 18&ndash;85 years old, experiencing memory complaints, right-handed, and fluent in English (it does not have to be your first language).
-    <br><br>
-    <strong>What's involved:</strong> Three blocks of non-invasive brain stimulation (two blocks of 5 sessions), MRI scans, cognitive testing, blood draws, and a cheek swab. All visits are in person at the University of Arizona (1230 N Cherry Ave, Tucson).
-  </p>
+      <p class="tmslab-study-eligibility"><strong>You may be eligible if you are:</strong> 18&ndash;85 years old, experiencing memory complaints, right-handed, and fluent in English (it does not have to be your first language).</p>
 
-  <div class="tmslab-study-flyer-wrap">
-    <figure class="tmslab-study-flyer-thumb"
-            tabindex="0"
-            data-flyer-src="{{ '/assets/img/flyers/glymphatic_flyer.jpg' | relative_url }}"
-            data-flyer-caption="Glymphatic TMS Study — recruitment flyer">
-      <img src="{{ '/assets/img/flyers/glymphatic_flyer.jpg' | relative_url }}"
-           alt="Glymphatic TMS Study recruitment flyer preview"
-           loading="lazy">
-      <figcaption class="tmslab-study-flyer-hint">Click to enlarge</figcaption>
-    </figure>
+      <p class="tmslab-study-eligibility"><strong>What's involved:</strong> Three blocks of non-invasive brain stimulation (two blocks of 5 sessions), MRI scans, cognitive testing, blood draws, and a cheek swab. All visits are in person at the University of Arizona (1230 N Cherry Ave, Tucson).</p>
+    </div>
 
-    <a href="{{ '/assets/img/flyers/glymphatic_flyer.pdf' | relative_url }}"
-       download
-       class="tmslab-study-flyer-download">
-      Download printable flyer (PDF) &darr;
-    </a>
+    <aside class="tmslab-study-card-aside">
+      <figure class="tmslab-study-flyer-thumb"
+              tabindex="0"
+              role="button"
+              aria-label="Click to enlarge flyer"
+              data-flyer-src="{{ '/assets/img/flyers/glymphatic_flyer.jpg' | relative_url }}"
+              data-flyer-caption="Glymphatic TMS Study — recruitment flyer">
+        <img src="{{ '/assets/img/flyers/glymphatic_flyer.jpg' | relative_url }}"
+             alt="Glymphatic TMS Study recruitment flyer"
+             loading="lazy">
+        <figcaption class="tmslab-study-flyer-hint">Click to enlarge</figcaption>
+      </figure>
+
+      <a href="{{ '/assets/img/flyers/glymphatic_flyer.pdf' | relative_url }}"
+         download
+         class="tmslab-study-flyer-download">
+        Download flyer (PDF) &darr;
+      </a>
+    </aside>
   </div>
 </div>
 
-<div class="tmslab-study-card">
-  <h3>Nutrition and Brain Plasticity</h3>
-  <div class="tmslab-study-meta">
-    <span class="tmslab-grant-type-pill">Recruiting</span>
-    <span class="tmslab-grant-agency-pill">Ketone TMS Study</span>
+<div class="tmslab-study-card" markdown="0">
+  <div class="tmslab-study-card-inner tmslab-study-card-inner--no-aside">
+    <div class="tmslab-study-card-content">
+      <h3>Nutrition and Brain Plasticity</h3>
+      <div class="tmslab-study-meta">
+        <span class="tmslab-grant-type-pill">Recruiting</span>
+        <span class="tmslab-grant-agency-pill">Ketone TMS Study</span>
+      </div>
+
+      <p>Emerging evidence suggests that dietary ketones may influence neural plasticity. This study combines ketone supplementation with Transcranial Magnetic Stimulation (TMS) to investigate the downstream neural interactions between metabolic and stimulation-based approaches to brain health.</p>
+
+      <p class="tmslab-study-eligibility">Full eligibility criteria and study details will be shared during initial screening. Use the "Sign up to participate" button below to express interest, and our team will follow up with more information.</p>
+    </div>
   </div>
-
-  <p>
-    Emerging evidence suggests that dietary ketones may influence neural plasticity. This study combines ketone supplementation with Transcranial Magnetic Stimulation (TMS) to investigate the downstream neural interactions between metabolic and stimulation-based approaches to brain health.
-  </p>
-
-  <p class="tmslab-study-eligibility">
-    Full eligibility criteria and study details will be shared during initial screening. Use the "Sign up to participate" button below to express interest, and our team will follow up with more information.
-  </p>
 </div>
 
 <p class="tmslab-irb-note">All studies are reviewed and approved by The University of Arizona Institutional Review Board.</p>

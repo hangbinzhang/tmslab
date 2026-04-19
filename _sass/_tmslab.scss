@@ -2694,35 +2694,73 @@ html[data-theme="dark"] .tmslab-study-card {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
-/* Study flyer preview — compact thumbnail that opens the
-   full image in a lightbox, paired with a PDF download link.
-   The old full-bleed flyer was replaced because a 560px image
-   dominated the card and made the card feel like a flyer
-   wrapper rather than a study summary. */
-.tmslab-study-flyer-wrap {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin: 1.5rem 0 0;
-  flex-wrap: wrap;
+/* Study card inner grid — description column on the left,
+   optional flyer aside on the right. At ≤720px the grid
+   collapses to a single column so the flyer stacks above the
+   description for easy reach on mobile. The --no-aside variant
+   keeps cards without a flyer in a single clean column without
+   blank whitespace where the aside would sit. */
+.tmslab-study-card-inner {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 2rem;
+  align-items: start;
 }
 
+.tmslab-study-card-inner--no-aside {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 720px) {
+  .tmslab-study-card-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.tmslab-study-card-content p {
+  margin: 0 0 0.75rem;
+  max-width: none;
+  line-height: 1.65;
+}
+
+.tmslab-study-card-content > p:last-child {
+  margin-bottom: 0;
+}
+
+.tmslab-study-card-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media (max-width: 720px) {
+  .tmslab-study-card-aside {
+    align-items: flex-start;
+  }
+}
+
+/* Flyer thumbnail inside the aside. The thumb is a click/keyboard
+   trigger wired up by /assets/js/flyer-lightbox.js — the hint
+   caption fades in on hover/focus to reinforce affordance. */
 .tmslab-study-flyer-thumb {
   position: relative;
-  width: 180px;
+  width: 100%;
+  max-width: 240px;
   margin: 0;
   cursor: pointer;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(44, 36, 22, 0.12);
+  box-shadow: 0 2px 8px rgba(44, 36, 22, 0.15);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  flex-shrink: 0;
+  background: var(--tmslab-sand-light, #efe6d6);
 }
 
 .tmslab-study-flyer-thumb:hover,
 .tmslab-study-flyer-thumb:focus {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(44, 36, 22, 0.2);
+  box-shadow: 0 6px 18px rgba(44, 36, 22, 0.22);
   outline: none;
 }
 
@@ -2749,7 +2787,7 @@ html[data-theme="dark"] .tmslab-study-card {
     rgba(20, 14, 10, 0)
   );
   color: #ffffff;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -2765,32 +2803,19 @@ html[data-theme="dark"] .tmslab-study-card {
 }
 
 .tmslab-study-flyer-download {
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--tmslab-clay, #b8654a);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.18s ease;
-  align-self: center;
+  text-align: center;
 }
 
 .tmslab-study-flyer-download:hover,
 .tmslab-study-flyer-download:focus {
   border-bottom-color: var(--tmslab-clay, #b8654a);
   text-decoration: none;
-}
-
-@media (max-width: 560px) {
-  .tmslab-study-flyer-wrap {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  .tmslab-study-flyer-thumb {
-    width: 100%;
-    max-width: 240px;
-  }
 }
 
 /* Flyer lightbox — standalone from the gallery lightbox because
