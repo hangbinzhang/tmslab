@@ -15,14 +15,14 @@ Our lab conducts studies on memory, cognitive aging, and brain stimulation. Revi
     <div class="tmslab-study-card-content">
       <h3>Sleep, Brain Waste Clearance, and Memory</h3>
       <div class="tmslab-study-meta">
-        <span class="tmslab-grant-type-pill">Ages 18&ndash;85</span>
+        <span class="tmslab-grant-type-pill">Ages 50&ndash;85</span>
         <span class="tmslab-grant-type-pill">Up to $590 compensation</span>
         <span class="tmslab-grant-agency-pill">Glymphatic TMS Study</span>
       </div>
 
       <p>We are developing methods for preventing age-related memory decline using Transcranial Magnetic Stimulation (TMS), a non-invasive technique already proven safe and effective for treating depression and migraines. This study examines how TMS may support the brain's glymphatic system &mdash; a waste-clearance pathway active during sleep that may play a role in protecting memory and brain health.</p>
 
-      <p class="tmslab-study-eligibility"><strong>You may be eligible if you are:</strong> 18&ndash;85 years old, experiencing memory complaints, right-handed, and fluent in English (it does not have to be your first language).</p>
+      <p class="tmslab-study-eligibility"><strong>You may be eligible if you are:</strong> 50&ndash;85 years old, experiencing memory complaints, right-handed, and fluent in English (it does not have to be your first language).</p>
 
       <p class="tmslab-study-eligibility"><strong>What's involved:</strong> Three blocks of non-invasive brain stimulation (two blocks of 5 sessions), MRI scans, cognitive testing, blood draws, and a cheek swab. All visits are in person at the University of Arizona (1230 N Cherry Ave, Tucson).</p>
     </div>

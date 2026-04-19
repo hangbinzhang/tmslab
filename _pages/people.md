@@ -171,6 +171,7 @@ nav_order: 4
          onerror="this.style.visibility='hidden'">
     <div class="tmslab-alumnus-info">
       <p class="tmslab-alumnus-name">Koeun Lim, PhD</p>
+      <p class="tmslab-alumnus-now">Now: Data scientist at Biotronik Neuro</p>
     </div>
   </div>
 
@@ -221,7 +222,8 @@ nav_order: 4
          onerror="this.style.visibility='hidden'">
     <div class="tmslab-alumnus-info">
       <p class="tmslab-alumnus-name">Christopher Trapani, MD</p>
-      <p class="tmslab-alumnus-role">Medical School Student</p>
+      <p class="tmslab-alumnus-role">Medical school student</p>
+      <p class="tmslab-alumnus-now">Resident in internal medicine/Neurology at Banner University Medical Center/VA</p>
     </div>
   </div>
 
@@ -248,6 +250,7 @@ nav_order: 4
     <div class="tmslab-alumnus-info">
       <p class="tmslab-alumnus-name">Viet Ton That, BS</p>
       <p class="tmslab-alumnus-role">Undegraduate Researcher</p>
+      <p class="tmslab-alumnus-now">Now: Specialist, Business Intelligence COM Info Technology Services</p>
     </div>
   </div>
 
@@ -285,7 +288,7 @@ nav_order: 4
     <div class="tmslab-alumnus-info">
       <p class="tmslab-alumnus-name">Tessa Spangler, BS</p>
       <p class="tmslab-alumnus-role">Undergraduate Researcher</p>
-      <p class="tmslab-alumnus-now">Now: Tucson Medical Center; founder of &ldquo;Giving a Little Arizona Magic&rdquo;</p>
+      <p class="tmslab-alumnus-now">Now: Medical school student at New York Medical College</p>
     </div>
   </div>
 

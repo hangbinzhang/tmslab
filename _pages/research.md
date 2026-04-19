@@ -87,31 +87,6 @@ Our research integrates TMS, neuroimaging, and cognitive assessment to understan
 
 <section>
 
-<p class="tmslab-themes-label">Funding at a glance</p>
-
-<div class="tmslab-stats-grid">
-
-  <div class="tmslab-stat">
-    <span class="tmslab-stat-num">7</span>
-    <span class="tmslab-stat-label">Active grants</span>
-  </div>
-
-  <div class="tmslab-stat">
-    <span class="tmslab-stat-num">2</span>
-    <span class="tmslab-stat-label">As PI</span>
-  </div>
-
-  <div class="tmslab-stat tmslab-stat--text">
-    <span class="tmslab-stat-num">NIH &middot; DoD &middot; VA</span>
-    <span class="tmslab-stat-label">Funding agencies</span>
-  </div>
-
-</div>
-
-</section>
-
-<section>
-
 <p class="tmslab-themes-label">Current Research Support</p>
 
 <div class="tmslab-grants-grid">
@@ -122,7 +97,42 @@ Our research integrates TMS, neuroimaging, and cognitive assessment to understan
       <span class="tmslab-grant-agency-pill">NIH/NIA</span>
     </div>
     <h3 class="tmslab-grant-title">Hippocampal Plasticity via Repetitive TMS</h3>
-    <p class="tmslab-grant-meta">PI: Ying-hui Chou <span class="tmslab-dot">·</span> 05/2020 – 01/2025</p>
+    <p class="tmslab-grant-meta">PI: Ying-hui Chou <span class="tmslab-dot">·</span> 05/2020 – 01/2027</p>
+  </article>
+
+  <article class="tmslab-grant-card">
+    <div class="tmslab-grant-card-head">
+      <span class="tmslab-grant-agency-pill">McKnight</span>
+    </div>
+    <h3 class="tmslab-grant-title">Targeting Sleep to Preserve Memory: Accelerated Theta Burst Stimulation and At-Home Sleep EEG to Enhance Cognitive Health in Aging</h3>
+    <p class="tmslab-grant-meta">PIs: Ying-hui Chou and Christian Agudelo <span class="tmslab-dot">·</span> 07/2026 – 06/2028</p>
+  </article>
+
+  <article class="tmslab-grant-card">
+    <div class="tmslab-grant-card-head">
+      <span class="tmslab-grant-type-pill">Developmental</span>
+      <span class="tmslab-grant-agency-pill">AZ Alzheimer's Consortium</span>
+    </div>
+    <h3 class="tmslab-grant-title">Precision Neuromodulation for Cognitive Aging: Leveraging BrainAGE to Predict and Personalize rTMS Response</h3>
+    <p class="tmslab-grant-meta">PI: Yilin Liu <span class="tmslab-dot">·</span> 07/2026 – 06/2028</p>
+  </article>
+
+  <article class="tmslab-grant-card">
+    <div class="tmslab-grant-card-head">
+      <span class="tmslab-grant-type-pill">Mini-Grant</span>
+      <span class="tmslab-grant-agency-pill">W. A. Franke Honors College</span>
+    </div>
+    <h3 class="tmslab-grant-title">Investigating the Potential of Ketone Supplementation as a Primer for Neural Plasticity</h3>
+    <p class="tmslab-grant-meta">PIs: Shraddha Dwivedi and Carol Chen <span class="tmslab-dot">·</span> 03/2026 – 02/2028</p>
+  </article>
+
+  <article class="tmslab-grant-card">
+    <div class="tmslab-grant-card-head">
+      <span class="tmslab-grant-type-pill">Pilot</span>
+      <span class="tmslab-grant-agency-pill">AZ Alzheimer's Consortium</span>
+    </div>
+    <h3 class="tmslab-grant-title">Arizona Alzheimer's Consortium Match Projects</h3>
+    <p class="tmslab-grant-meta">PI: Lee Ryan <span class="tmslab-dot">·</span> Co-Investigator <span class="tmslab-dot">·</span> 07/2018 – 06/2027</p>
   </article>
 
   <article class="tmslab-grant-card">
@@ -148,16 +158,7 @@ Our research integrates TMS, neuroimaging, and cognitive assessment to understan
       <span class="tmslab-grant-agency-pill">NIH/NIBIB</span>
     </div>
     <h3 class="tmslab-grant-title">Transcranial Acoustoelectric Imaging of Neuronal Currents</h3>
-    <p class="tmslab-grant-meta">PI: Russell Witte <span class="tmslab-dot">·</span> Co-Investigator <span class="tmslab-dot">·</span> 09/2020 – 06/2025</p>
-  </article>
-
-  <article class="tmslab-grant-card">
-    <div class="tmslab-grant-card-head">
-      <span class="tmslab-grant-type-pill">R56/R01</span>
-      <span class="tmslab-grant-agency-pill">NIH/NIA</span>
-    </div>
-    <h3 class="tmslab-grant-title">Explore-Exploit Decision Making in Older Adults</h3>
-    <p class="tmslab-grant-meta">PI: Robert Wilson <span class="tmslab-dot">·</span> Co-Investigator <span class="tmslab-dot">·</span> 09/2018 – 01/2025</p>
+    <p class="tmslab-grant-meta">PI: Russell Witte <span class="tmslab-dot">·</span> Co-Investigator <span class="tmslab-dot">·</span> 09/2020 – 06/2027</p>
   </article>
 
   <article class="tmslab-grant-card">
@@ -169,15 +170,6 @@ Our research integrates TMS, neuroimaging, and cognitive assessment to understan
     <p class="tmslab-grant-meta">PI: Nan-kuei Chen <span class="tmslab-dot">·</span> Co-Investigator <span class="tmslab-dot">·</span> 07/2024 – 06/2026</p>
   </article>
 
-  <article class="tmslab-grant-card">
-    <div class="tmslab-grant-card-head">
-      <span class="tmslab-grant-type-pill">Developmental</span>
-      <span class="tmslab-grant-agency-pill">AZ Alzheimer's Consortium</span>
-    </div>
-    <h3 class="tmslab-grant-title">Arizona Alzheimer's Consortium Project</h3>
-    <p class="tmslab-grant-meta">PI: Ying-hui Chou <span class="tmslab-dot">·</span> 07/2023 – 06/2025</p>
-  </article>
-
 </div>
 
 </section>
@@ -186,7 +178,7 @@ Our research integrates TMS, neuroimaging, and cognitive assessment to understan
 
 <p class="tmslab-themes-label">Past Research Support</p>
 
-<p class="tmslab-grants-table-caption">16 completed grants &mdash; scroll within the panel below to see all.</p>
+<p class="tmslab-grants-table-caption">17 completed grants &mdash; scroll within the panel below to see all.</p>
 
 <div class="tmslab-grants-table-wrap">
 <table class="tmslab-grants-table">
@@ -206,6 +198,20 @@ Our research integrates TMS, neuroimaging, and cognitive assessment to understan
       <td class="col-role">PI</td>
       <td class="col-agency">NIH/NIA</td>
       <td class="col-type">R21</td>
+    </tr>
+    <tr>
+      <td class="col-period">09/2018 – 01/2025</td>
+      <td class="col-title">Explore-Exploit Decision Making in Older Adults (PI: Robert Wilson)</td>
+      <td class="col-role">Co-I</td>
+      <td class="col-agency">NIH/NIA</td>
+      <td class="col-type">R56/R01</td>
+    </tr>
+    <tr>
+      <td class="col-period">07/2023 – 06/2025</td>
+      <td class="col-title">Arizona Alzheimer's Consortium Project</td>
+      <td class="col-role">PI</td>
+      <td class="col-agency">AZ Alzheimer's Consortium</td>
+      <td class="col-type">Developmental</td>
     </tr>
     <tr>
       <td class="col-period">02/2021 – 06/2021</td>
@@ -236,71 +242,64 @@ Our research integrates TMS, neuroimaging, and cognitive assessment to understan
       <td class="col-type">—</td>
     </tr>
     <tr>
-      <td class="col-period">07/2018 – 06/2024</td>
-      <td class="col-title">Arizona Alzheimer's Consortium Match Projects</td>
-      <td class="col-role">Co-I</td>
-      <td class="col-agency">AZ Alzheimer's Consortium</td>
-      <td class="col-type">Pilot</td>
-    </tr>
-    <tr>
       <td class="col-period">07/2018 – 12/2021</td>
-      <td class="col-title">Treatment of Post-Chemotherapy Cognitive Impairment with TMS</td>
+      <td class="col-title">Treatment of Post-Chemotherapy Cognitive Impairment with TMS (PI: Phillip Kuo)</td>
       <td class="col-role">Co-I</td>
       <td class="col-agency">UA Cancer Center</td>
       <td class="col-type">Pilot</td>
     </tr>
     <tr>
       <td class="col-period">10/2019 – 09/2020</td>
-      <td class="col-title">4D Transcranial Acoustoelectric Imaging</td>
+      <td class="col-title">4D Transcranial Acoustoelectric Imaging (PI: Russ Witte)</td>
       <td class="col-role">Co-I</td>
       <td class="col-agency">NIH</td>
       <td class="col-type">R56</td>
     </tr>
     <tr>
       <td class="col-period">07/2017 – 06/2019</td>
-      <td class="col-title">Neural Substrates of Explore-Exploit Decisions in Old Age</td>
+      <td class="col-title">Neural Substrates of Explore-Exploit Decisions in Old Age (PI: Robert Wilson)</td>
       <td class="col-role">Co-I</td>
       <td class="col-agency">NIH/NIA (Sub-Award P30 AG019610)</td>
       <td class="col-type">Pilot</td>
     </tr>
     <tr>
       <td class="col-period">10/2020 – 09/2022</td>
-      <td class="col-title">Transcranial Magnetic Stimulation of the Default Mode Network to Improve Sleep</td>
+      <td class="col-title">Transcranial Magnetic Stimulation of the Default Mode Network to Improve Sleep (PI: Scott Killgore)</td>
       <td class="col-role">Co-I</td>
       <td class="col-agency">DoD, Discovery Award</td>
       <td class="col-type">—</td>
     </tr>
     <tr>
       <td class="col-period">09/2011 – 05/2016</td>
-      <td class="col-title">Neuroimaging of Visual Attention in Aging</td>
+      <td class="col-title">Neuroimaging of Visual Attention in Aging (PI: David Madden)</td>
       <td class="col-role">Key Personnel</td>
       <td class="col-agency">NIH/NIA</td>
       <td class="col-type">R01</td>
     </tr>
     <tr>
       <td class="col-period">09/2012 – 06/2017</td>
-      <td class="col-title">Dorsal Cingulate Activity and Cognitive Decline in Late-Life Depression</td>
+      <td class="col-title">Dorsal Cingulate Activity and Cognitive Decline in Late-Life Depression (PIs: Lihong Wang and David Madden)</td>
       <td class="col-role">Key Personnel</td>
       <td class="col-agency">NIH/NIMH</td>
       <td class="col-type">R01</td>
     </tr>
     <tr>
       <td class="col-period">07/2012 – 12/2014</td>
-      <td class="col-title">Environments as Smoking Cues: Imaging Brain Substrates, Developing New Treatments</td>
+      <td class="col-title">Environments as Smoking Cues: Imaging Brain Substrates, Developing New Treatments (PI: Joseph McClernon)</td>
       <td class="col-role">Key Personnel</td>
       <td class="col-agency">NIH/NIDA</td>
       <td class="col-type">R21</td>
     </tr>
     <tr>
       <td class="col-period">07/1984 – 04/2015</td>
-      <td class="col-title">Behavior and Physiology in Aging</td>
+      <td class="col-title">Behavior and Physiology in Aging (PI: Harvey Cohen)</td>
       <td class="col-role">Postdoc Trainee</td>
       <td class="col-agency">NIH/NIA</td>
       <td class="col-type">T32</td>
     </tr>
     <tr>
       <td class="col-period">09/2008 – 07/2013</td>
-      <td class="col-title">Developing Interventions to Improve Function in Seniors with Comorbid Conditions</td>
+      <td class="col-title">Developing Interventions to Improve Function in Seniors with Comorbid Conditions (PI: Heather Whitson)</td>
       <td class="col-role">Postdoc Fellow</td>
       <td class="col-agency">NIH/NIA</td>
       <td class="col-type">K23</td>
@@ -319,10 +318,3 @@ Our research integrates TMS, neuroimaging, and cognitive assessment to understan
 </section>
 
 </div>
-
-<!--
-  Trainee recognition (formerly here as "Trainee Recognition") moved to the
-  People page so awards live alongside the people who earned them. See
-  /people/#awards-honors. Reverting? Reattach the previous
-  <section class="tmslab-research-page-trainees"> block at this position.
--->
