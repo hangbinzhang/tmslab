@@ -325,20 +325,100 @@ html[data-theme="dark"] .tmslab-objective-card:hover {
   margin-top: -1.5rem;
   margin-bottom: 1.5rem;
   overflow: hidden;
-  max-height: 380px;
+  /* Explicit height is required because child images are absolutely
+     positioned (to stack for crossfade) and therefore don't
+     contribute to container intrinsic height. */
+  height: 380px;
 }
 
+/* Hero images stack in the same spot so the JS crossfade (see
+   /assets/js/hero-rotate.js) can move the `.is-active` class
+   between them. Without `.is-active` they're invisible; the
+   1s CSS transition handles the crossfade smoothly. */
 .tmslab-hero-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: 380px;
+  height: 100%;
   object-fit: cover;
   /* Skyline horizon sits in the upper-middle of the source — bias
      vertical crop downward so we keep mountains + city, not foreground. */
   object-position: 50% 35%;
   display: block;
-  /* No brightness filter — the gradient ::before below darkens
-     just the left side where the text lives, plus a soft bottom
-     gradient that grounds the image. */
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.tmslab-hero-img.is-active {
+  opacity: 1;
+}
+
+/* Reduced-motion: freeze the rotation on the first image and
+   disable the fade. The JS also skips the auto-rotate interval
+   when this media query matches, but still renders the dot
+   controls so users can pick an image manually. */
+@media (prefers-reduced-motion: reduce) {
+  .tmslab-hero-img {
+    transition: none;
+  }
+}
+
+/* Click-to-select dots. Generated at runtime by hero-rotate.js
+   (one button per image), so there's no markup in the page to
+   keep in sync when photos are added or removed. Positioned
+   bottom-center of the hero over the gradient so they read as
+   overlay controls rather than body content. */
+.tmslab-hero-dots {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.25rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 3;
+  padding: 0.4rem 0.65rem;
+  background: rgba(20, 14, 10, 0.35);
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.tmslab-hero-dot {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 1px solid rgba(250, 247, 242, 0.7);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.18s ease, border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.tmslab-hero-dot:hover,
+.tmslab-hero-dot:focus-visible {
+  background: rgba(250, 247, 242, 0.5);
+  outline: none;
+}
+
+.tmslab-hero-dot.is-active {
+  background: var(--tmslab-cream, #faf7f2);
+  border-color: var(--tmslab-cream, #faf7f2);
+  transform: scale(1.15);
+}
+
+/* Keyboard focus ring for accessibility — slightly offset so it
+   doesn't blur into the filled dot on active state. */
+.tmslab-hero-dot:focus-visible {
+  box-shadow: 0 0 0 2px rgba(184, 101, 74, 0.9);
+}
+
+@media (max-width: 640px) {
+  .tmslab-hero-dots {
+    bottom: 0.75rem;
+    right: 0.75rem;
+  }
 }
 
 /* Uniform vertical tint across the entire image — no horizontal
@@ -756,8 +836,10 @@ html[data-theme="dark"] .tmslab-research-card-body {
    ==================================================== */
 
 @media (max-width: 640px) {
-  .tmslab-hero { max-height: 320px; }
-  .tmslab-hero-img { height: 320px; }
+  .tmslab-hero { height: 320px; }
+  /* .tmslab-hero-img already inherits width/height: 100% of the
+     container from the desktop rule, so no explicit height needed
+     here. */
 
   .layout-about h2,
   .layout-about .post > article > h2 {

@@ -36,8 +36,49 @@ latest_posts:
   enabled: false
 ---
 
+{%- comment -%}
+  Auto-discovery: every .jpg/.jpeg/.png/.webp file in
+  /assets/img/hero/ is picked up automatically. Drop a file in →
+  next rebuild shows it in the rotation. Remove a file → it's
+  gone. No YAML, no markdown edits needed.
+
+  Filtered out: imagemagick responsive variants (-480/-800/-1400)
+  and any README.md files.
+
+  Sort: alphabetical. Prefix filenames (01_, 02_, …) if you want
+  a specific order; otherwise they'll rotate in whatever A→Z
+  order the filesystem yields.
+
+  First image: loading="eager" + .is-active (renders immediately).
+  Others: loading="lazy" + no initial class (fade in via the JS
+  cycle below).
+
+  Rotation JS: /assets/js/hero-rotate.js — skipped automatically
+  when only one image is present, and when the user prefers
+  reduced motion.
+{%- endcomment -%}
+
+{%- assign hero_files = site.static_files | where_exp: "f", "f.path contains '/assets/img/hero/'" -%}
+{%- assign hero_images = "" | split: "" -%}
+{%- for file in hero_files -%}
+  {%- assign ext = file.extname | downcase -%}
+  {%- if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".webp" -%}
+    {%- assign segs = file.basename | split: "-" -%}
+    {%- assign last_seg = segs | last -%}
+    {%- unless last_seg == "480" or last_seg == "800" or last_seg == "1400" -%}
+      {%- assign hero_images = hero_images | push: file -%}
+    {%- endunless -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign hero_images = hero_images | sort: "basename" -%}
+
 <div class="tmslab-hero">
-  <img src="{{ '/assets/img/hero/tucson_skyline.jpg' | relative_url }}" alt="Downtown Tucson skyline at sunset with Sentinel Peak (the A Mountain) at right" class="tmslab-hero-img">
+  {%- for image in hero_images -%}
+    <img src="{{ image.path | relative_url }}"
+         alt=""
+         class="tmslab-hero-img{% if forloop.first %} is-active{% endif %}"
+         {% if forloop.first %}loading="eager"{% else %}loading="lazy"{% endif %}>
+  {%- endfor -%}
   <div class="tmslab-hero-overlay">
     <div class="tmslab-hero-overlay-inner">
       <p class="tmslab-hero-kicker">University of Arizona</p>
@@ -172,3 +213,5 @@ latest_posts:
   {% endcomment %}
 
 </div>
+
+<script src="{{ '/assets/js/hero-rotate.js' | relative_url }}" defer></script>
