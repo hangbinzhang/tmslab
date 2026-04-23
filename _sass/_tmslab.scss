@@ -1339,6 +1339,15 @@ html[data-theme="dark"] .tmslab-grant-card {
 @media (max-width: 640px) {
   .tmslab-pi-section {
     grid-template-columns: 1fr;
+    /* Without overriding the named areas, the template still
+       requires two columns ("photo content"), which keeps the
+       photo squeezed side-by-side with the text on a phone and
+       visually crops Dr. Chou's face. Restructure to a single
+       stacked column on mobile. */
+    grid-template-areas:
+      "photo"
+      "content"
+      "bio";
     gap: 1.5rem;
   }
 }
