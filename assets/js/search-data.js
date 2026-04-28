@@ -206,6 +206,9 @@ ninja.data = [{
           section: "News",},{id: "news-congratulations-to-carol-chen-on-her-acceptance-to-the-university-of-arizona-college-of-medicine-tucson-a-very-well-deserved-achievement",
           title: 'Congratulations to Carol Chen on her acceptance to the University of Arizona College...',
           description: "",
+          section: "News",},{id: "news-congratulations-to-carol-chen-and-shraddha-dwivedi-for-winning-first-place-at-the-honors-pinnacle-conference-in-the-exploratory-mini-grant-category-special-thanks-to-mark-sundman-for-his-outstanding-mentorship-and-support-of-their-work",
+          title: 'Congratulations to Carol Chen and Shraddha Dwivedi for winning first place at the...',
+          description: "",
           section: "News",},{
       id: 'light-theme',
       title: 'Change theme to light',
